@@ -1,0 +1,1610 @@
+[model]
+version = "2.0.0-rc.0"
+name = "JVS corpus"
+description = """
+  (Ver. 2.0.0-rc.0)
+  JVS corpus および JVS-MuSiC を使用して学習したモデルです。 使用に際しては JVS corpus および JVS-MuSiC の「使い方」に従う必要があります。 特に、許可なく営利目的で使用することが禁じられている点にご注意ください。
+  The model was trained using the JVS corpus and JVS-MuSiC. It is necessary to adhere to the terms of use of the JVS corpus and JVS-MuSiC when using the model. Be especially aware that unauthorized commercial use is prohibited.
+  JVS corpus: https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus
+  JVS-MuSiC: https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_music
+"""
+
+[voice.0]
+name = "jvs001"
+description = """
+小倉百人一首:
+  天智天皇
+  秋の田のかりほの庵の苫をあらみわが衣手は露にぬれつつ
+Element:
+  Hydrogen (H)
+"""
+average_pitch = 49.875
+
+[voice.0.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.1]
+name = "jvs002"
+description = """
+小倉百人一首:
+  持統天皇
+  春過ぎて夏来にけらし白妙の衣ほすてふ天の香具山
+Element:
+  Helium (He)
+"""
+average_pitch = 56.625
+
+[voice.1.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.2]
+name = "jvs003"
+description = """
+小倉百人一首:
+  柿本人麿
+  足引きの山鳥の尾のしだり尾のながながし夜をひとりかもねむ
+Element:
+  Lithium (Li)
+"""
+average_pitch = 50.875
+
+[voice.2.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.3]
+name = "jvs004"
+description = """
+小倉百人一首:
+  山部赤人
+  田子の浦に打出でてみれば白妙のふじの高嶺に雪は降りつつ
+Element:
+  Beryllium (Be)
+"""
+average_pitch = 59.125
+
+[voice.3.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.4]
+name = "jvs005"
+description = """
+小倉百人一首:
+  猿丸大夫
+  奥山に紅葉ふみ分けなく鹿の聲きく時ぞ秋は悲しき
+Element:
+  Boron (B)
+"""
+average_pitch = 49.25
+
+[voice.4.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.5]
+name = "jvs006"
+description = """
+小倉百人一首:
+  中納言家持
+  かさゝぎの渡せる橋におく霜のしろきを見れば夜ぞふけにける
+Element:
+  Carbon (C)
+"""
+average_pitch = 43.5
+
+[voice.5.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.6]
+name = "jvs007"
+description = """
+小倉百人一首:
+  安部仲麻呂
+  天の原ふりさけ見れば春日なるみかさの山に出でし月かも
+Element:
+  Nitrogen (N)
+"""
+average_pitch = 56.125
+
+[voice.6.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.7]
+name = "jvs008"
+description = """
+小倉百人一首:
+  喜撰法師
+  わが庵は都のたつみしかぞ住む世をうぢ山と人はいふなり
+Element:
+  Oxygen (O)
+"""
+average_pitch = 57.625
+
+[voice.7.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.8]
+name = "jvs009"
+description = """
+小倉百人一首:
+  小野小町
+  花の色は移りにけりな徒に我が身世にふるながめせしまに
+Element:
+  Fluorine (F)
+"""
+average_pitch = 46.875
+
+[voice.8.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.9]
+name = "jvs010"
+description = """
+小倉百人一首:
+  蝉丸
+  これや此の行くも帰るも別かれては知るも知らぬも逢坂の関
+Element:
+  Neon (Ne)
+"""
+average_pitch = 61.125
+
+[voice.9.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.10]
+name = "jvs011"
+description = """
+小倉百人一首:
+  参議篁
+  わたの原八十島かけて漕ぎ出でぬと人にはつげよあまの釣り舟
+Element:
+  Sodium (Na)
+"""
+average_pitch = 51.125
+
+[voice.10.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.11]
+name = "jvs012"
+description = """
+小倉百人一首:
+  僧正遍昭
+  天つ風雲のかよひぢ吹きとぢよをとめの姿しばし留めむ
+Element:
+  Magnesium (Mg)
+"""
+average_pitch = 46.5
+
+[voice.11.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.12]
+name = "jvs013"
+description = """
+小倉百人一首:
+  陽成院
+  筑波嶺の峯より落つるみなの川戀ぞつもりて淵となりぬる
+Element:
+  Aluminium (Al)
+"""
+average_pitch = 50.25
+
+[voice.12.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.13]
+name = "jvs014"
+description = """
+小倉百人一首:
+  河原左大臣
+  陸奥のしのぶもぢずり誰故にみだれ初めにし我ならなくに
+Element:
+  Silicon (Si)
+"""
+average_pitch = 60.875
+
+[voice.13.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.14]
+name = "jvs015"
+description = """
+小倉百人一首:
+  光孝天皇
+  君がため春の野に出でて若菜つむわが衣手に雪は降りつつ
+Element:
+  Phosphorus (P)
+"""
+average_pitch = 59.625
+
+[voice.14.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.15]
+name = "jvs016"
+description = """
+小倉百人一首:
+  中納言行平
+  立別れいなばの山の嶺におふるまつとし聞かば今帰り来む
+Element:
+  Sulfur (S)
+"""
+average_pitch = 55.25
+
+[voice.15.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.16]
+name = "jvs017"
+description = """
+小倉百人一首:
+  在原業平朝臣
+  ちはやぶる神代も聞かず龍田川から紅に水くくるとは
+Element:
+  Chlorine (Cl)
+"""
+average_pitch = 56.5
+
+[voice.16.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.17]
+name = "jvs018"
+description = """
+小倉百人一首:
+  藤原敏行朝臣
+  住の江の岸に寄る浪よるさへや夢の通ひ路人目よくらむ
+Element:
+  Argon (Ar)
+"""
+average_pitch = 56.875
+
+[voice.17.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.18]
+name = "jvs019"
+description = """
+小倉百人一首:
+  伊勢
+  難波潟短き葦のふしのまもあはで此の世をすぐしてよとや
+Element:
+  Potassium (K)
+"""
+average_pitch = 58.0
+
+[voice.18.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.19]
+name = "jvs020"
+description = """
+小倉百人一首:
+  元良親王
+  侘びぬれば今はた同じ難波なる身をつくしても逢はむとぞ思ふ
+Element:
+  Calcium (Ca)
+"""
+average_pitch = 48.875
+
+[voice.19.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.20]
+name = "jvs021"
+description = """
+小倉百人一首:
+  素性法師
+  今来むといひしばかりに長月の有明の月を待ち出でつるかな
+Element:
+  Scandium (Sc)
+"""
+average_pitch = 44.875
+
+[voice.20.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.21]
+name = "jvs022"
+description = """
+小倉百人一首:
+  文屋康秀
+  吹くからに秋の草木のしをるればむべ山風をあらしといふらむ
+Element:
+  Titanium (Ti)
+"""
+average_pitch = 46.625
+
+[voice.21.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.22]
+name = "jvs023"
+description = """
+小倉百人一首:
+  大江千里
+  月見れば千々に物こそ悲しけれわが身ひとつの秋にはあらねど
+Element:
+  Vanadium (V)
+"""
+average_pitch = 47.25
+
+[voice.22.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.23]
+name = "jvs024"
+description = """
+小倉百人一首:
+  菅家
+  此の度は幣もとりあへず手向山紅葉の錦神のまにまに
+Element:
+  Chromium (Cr)
+"""
+average_pitch = 59.125
+
+[voice.23.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.24]
+name = "jvs025"
+description = """
+小倉百人一首:
+  三条右大臣
+  名にしおはば逢坂山のさねかづら人にしられでくるよしもがな
+Element:
+  Manganese (Mn)
+"""
+average_pitch = 57.375
+
+[voice.24.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.25]
+name = "jvs026"
+description = """
+小倉百人一首:
+  貞信公
+  小倉山峯のもみぢ葉心あらば今ひとたびのみゆき待たなむ
+Element:
+  Iron (Fe)
+"""
+average_pitch = 59.75
+
+[voice.25.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.26]
+name = "jvs027"
+description = """
+小倉百人一首:
+  中納言兼輔
+  みかの原わきて流るる泉川いつみきとてか戀しかるらむ
+Element:
+  Cobalt (Co)
+"""
+average_pitch = 58.375
+
+[voice.26.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.27]
+name = "jvs028"
+description = """
+小倉百人一首:
+  源宗于朝臣
+  山里は冬ぞ寂しさまさりける人目も草もかれぬと思へば
+Element:
+  Nickel (Ni)
+"""
+average_pitch = 46.125
+
+[voice.27.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.28]
+name = "jvs029"
+description = """
+小倉百人一首:
+  凡河内躬恒
+  心あてに折らばや折らむ初霜の置きまどはせる白菊の花
+Element:
+  Copper (Cu)
+"""
+average_pitch = 57.125
+
+[voice.28.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.29]
+name = "jvs030"
+description = """
+小倉百人一首:
+  壬生忠岑
+  有明のつれなく見えし別れより暁ばかり憂きものはなし
+Element:
+  Zinc (Zn)
+"""
+average_pitch = 59.25
+
+[voice.29.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.30]
+name = "jvs031"
+description = """
+小倉百人一首:
+  坂上是則
+  朝ぼらけ有明の月と見るまでに吉野の里に降れる白雪
+Element:
+  Gallium (Ga)
+"""
+average_pitch = 47.0
+
+[voice.30.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.31]
+name = "jvs032"
+description = """
+小倉百人一首:
+  春道列樹
+  山がはに風のかけたるしがらみは流れもあへぬ紅葉なりけり
+Element:
+  Germanium (Ge)
+"""
+average_pitch = 52.625
+
+[voice.31.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.32]
+name = "jvs033"
+description = """
+小倉百人一首:
+  紀友則
+  久方の光のどけき春の日にしづごころなく花の散るらむ
+Element:
+  Arsenic (As)
+"""
+average_pitch = 49.75
+
+[voice.32.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.33]
+name = "jvs034"
+description = """
+小倉百人一首:
+  藤原興風
+  誰をかも知る人にせむ高砂の松も昔の友ならなくに
+Element:
+  Selenium (Se)
+"""
+average_pitch = 46.375
+
+[voice.33.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.34]
+name = "jvs035"
+description = """
+小倉百人一首:
+  紀貫之
+  人はいさ心もしらずふるさとは花ぞ昔の香ににほひける
+Element:
+  Bromine (Br)
+"""
+average_pitch = 56.375
+
+[voice.34.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.35]
+name = "jvs036"
+description = """
+小倉百人一首:
+  清原深養父
+  夏の夜はまだ宵ながらあけぬるを雲のいづこに月宿るらむ
+Element:
+  Krypton (Kr)
+"""
+average_pitch = 59.25
+
+[voice.35.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.36]
+name = "jvs037"
+description = """
+小倉百人一首:
+  文屋朝康
+  白露に風の吹きしく秋の野はつらぬきとめぬ玉ぞ散りける
+Element:
+  Rubidium (Rb)
+"""
+average_pitch = 44.875
+
+[voice.36.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.37]
+name = "jvs038"
+description = """
+小倉百人一首:
+  右近
+  忘らるる身をば思はず誓ひてし人の命の惜しくもあるかな
+Element:
+  Strontium (Sr)
+"""
+average_pitch = 57.625
+
+[voice.37.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.38]
+name = "jvs039"
+description = """
+小倉百人一首:
+  参議等
+  浅茅生の小野の篠原しのぶれどあまりてなどか人の戀しき
+Element:
+  Yttrium (Y)
+"""
+average_pitch = 58.75
+
+[voice.38.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.39]
+name = "jvs040"
+description = """
+小倉百人一首:
+  平兼盛
+  忍れど色に出でにけり我が戀はものや思ふと人の問ふまで
+Element:
+  Zirconium (Zr)
+"""
+average_pitch = 57.875
+
+[voice.39.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.40]
+name = "jvs041"
+description = """
+小倉百人一首:
+  壬生忠見
+  戀すてふわが名はまだき立ちにけり人知れずこそ思ひそめしか
+Element:
+  Niobium (Nb)
+"""
+average_pitch = 49.75
+
+[voice.40.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.41]
+name = "jvs042"
+description = """
+小倉百人一首:
+  清原元輔
+  契りきなかたみに袖をしぼりつつ末の松山浪こさじとは
+Element:
+  Molybdenum (Mo)
+"""
+average_pitch = 48.125
+
+[voice.41.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.42]
+name = "jvs043"
+description = """
+小倉百人一首:
+  権中納言敦忠
+  逢ひみての後の心にくらぶれば昔はものを思はざりけり
+Element:
+  Technetium (Tc)
+"""
+average_pitch = 56.375
+
+[voice.42.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.43]
+name = "jvs044"
+description = """
+小倉百人一首:
+  中納言朝忠
+  逢ふことの絶えてしなくばなかなかに人をも身をも恨みざらまし
+Element:
+  Ruthenium (Ru)
+"""
+average_pitch = 48.0
+
+[voice.43.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.44]
+name = "jvs045"
+description = """
+小倉百人一首:
+  謙徳公
+  哀れともいふべき人はおもほえで身のいたづらになりぬべきかな
+Element:
+  Rhodium (Rh)
+"""
+average_pitch = 48.875
+
+[voice.44.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.45]
+name = "jvs046"
+description = """
+小倉百人一首:
+  曽祢好忠
+  由良の戸をわたる舟人楫をたえ行方もしらぬ戀の道かな
+Element:
+  Palladium (Pd)
+"""
+average_pitch = 48.75
+
+[voice.45.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.46]
+name = "jvs047"
+description = """
+小倉百人一首:
+  恵慶法師
+  八重葎しげれる宿のさびしきに人こそ見えね秋はきにけり
+Element:
+  Silver (Ag)
+"""
+average_pitch = 49.0
+
+[voice.46.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.47]
+name = "jvs048"
+description = """
+小倉百人一首:
+  源重之
+  風をいたみ岩うつ浪のおのれのみ砕けてものを思ふ頃かな
+Element:
+  Cadmium (Cd)
+"""
+average_pitch = 45.0
+
+[voice.47.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.48]
+name = "jvs049"
+description = """
+小倉百人一首:
+  大中臣能宣朝臣
+  御垣守衛士のたく火の夜はもえ晝は消えつつものをこそ思へ
+Element:
+  Indium (In)
+"""
+average_pitch = 48.375
+
+[voice.48.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.49]
+name = "jvs050"
+description = """
+小倉百人一首:
+  藤原義孝
+  君がため惜しからざりし命さへ長くもがなと思ひけるかな
+Element:
+  Tin (Sn)
+"""
+average_pitch = 48.25
+
+[voice.49.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.50]
+name = "jvs051"
+description = """
+小倉百人一首:
+  藤原実方朝臣
+  かくとだにえやはいぶきのさしも草さしも知らじなもゆる思ひを
+Element:
+  Antimony (Sb)
+"""
+average_pitch = 58.625
+
+[voice.50.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.51]
+name = "jvs052"
+description = """
+小倉百人一首:
+  藤原道信朝臣
+  明けぬればくるるものとは知りながらなほ恨めしき朝ぼらけかな
+Element:
+  Tellurium (Te)
+"""
+average_pitch = 50.5
+
+[voice.51.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.52]
+name = "jvs053"
+description = """
+小倉百人一首:
+  右大将道綱母
+  嘆きつつ独りぬる夜の明くるまはいかに久しきものとかは知る
+Element:
+  Iodine (I)
+"""
+average_pitch = 57.625
+
+[voice.52.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.53]
+name = "jvs054"
+description = """
+小倉百人一首:
+  儀同三司母
+  忘れじの行末までは難ければ今日を限りの命ともがな
+Element:
+  Xenon (Xe)
+"""
+average_pitch = 49.0
+
+[voice.53.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.54]
+name = "jvs055"
+description = """
+小倉百人一首:
+  大納言公任
+  瀧の音はたえて久しくなりぬれど名こそ流れてなほ聞こえけれ
+Element:
+  Cesium (Cs)
+"""
+average_pitch = 57.75
+
+[voice.54.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.55]
+name = "jvs056"
+description = """
+小倉百人一首:
+  和泉式部
+  あらざらむ此の世のほかの思ひ出に今一たびの逢ふこともがな
+Element:
+  Barium (Ba)
+"""
+average_pitch = 56.75
+
+[voice.55.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.56]
+name = "jvs057"
+description = """
+小倉百人一首:
+  紫式部
+  廻り逢ひて見しやそれともわかぬまに雲がくれにし夜半の月かな
+Element:
+  Lanthanum (La)
+"""
+average_pitch = 56.375
+
+[voice.56.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.57]
+name = "jvs058"
+description = """
+小倉百人一首:
+  大貮三位
+  有馬山ゐなのささ原風吹けばいでそよ人を忘れやはする
+Element:
+  Cerium (Ce)
+"""
+average_pitch = 57.0
+
+[voice.57.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.58]
+name = "jvs059"
+description = """
+小倉百人一首:
+  赤染衛門
+  やすらはで寝なましものを小夜更けて傾くまでの月を見しかな
+Element:
+  Praseodymium (Pr)
+"""
+average_pitch = 57.5
+
+[voice.58.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.59]
+name = "jvs060"
+description = """
+小倉百人一首:
+  小式部内侍
+  大江山いくのの道の遠ければまだふみも見ず天の橋立
+Element:
+  Neodymium (Nd)
+"""
+average_pitch = 57.75
+
+[voice.59.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.60]
+name = "jvs061"
+description = """
+小倉百人一首:
+  伊勢大輔
+  古への奈良の都の八重ざくら今日九重に匂ひぬるかな
+Element:
+  Promethium (Pm)
+"""
+average_pitch = 59.0
+
+[voice.60.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.61]
+name = "jvs062"
+description = """
+小倉百人一首:
+  清少納言
+  夜をこめて鳥のそら音ははかるとも世に逢坂の関はゆるさじ
+Element:
+  Samarium (Sm)
+"""
+average_pitch = 56.625
+
+[voice.61.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.62]
+name = "jvs063"
+description = """
+小倉百人一首:
+  左京大夫道雅
+  今はただ思ひ絶えなむとばかりを人づてならで言ふよしもがな
+Element:
+  Europium (Eu)
+"""
+average_pitch = 58.0
+
+[voice.62.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.63]
+name = "jvs064"
+description = """
+小倉百人一首:
+  権中納言定頼
+  朝ぼらけ宇治の川霧絶えだえにあらはれ渡る瀬々の網代木
+Element:
+  Gadolinium (Gd)
+"""
+average_pitch = 56.125
+
+[voice.63.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.64]
+name = "jvs065"
+description = """
+小倉百人一首:
+  相模
+  恨み侘びほさぬ袖だにあるものを戀に朽ちなむ名こそ惜しけれ
+Element:
+  Terbium (Tb)
+"""
+average_pitch = 58.75
+
+[voice.64.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.65]
+name = "jvs066"
+description = """
+小倉百人一首:
+  大僧正行尊
+  諸共にあはれと思へ山ざくら花よりほかに知る人もなし
+Element:
+  Dysprosium (Dy)
+"""
+average_pitch = 59.0
+
+[voice.65.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.66]
+name = "jvs067"
+description = """
+小倉百人一首:
+  周防内侍
+  春の夜の夢ばかりなる手枕にかひなく立たむ名こそ惜しけれ
+Element:
+  Holmium (Ho)
+"""
+average_pitch = 59.0
+
+[voice.66.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.67]
+name = "jvs068"
+description = """
+小倉百人一首:
+  三條院
+  心にもあらで憂世にながらへば戀しかるべき夜半の月かな
+Element:
+  Erbium (Er)
+"""
+average_pitch = 47.375
+
+[voice.67.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.68]
+name = "jvs069"
+description = """
+小倉百人一首:
+  能因法師
+  嵐ふく三室の山のもみぢ葉は龍田の川の錦なりけり
+Element:
+  Thulium (Tm)
+"""
+average_pitch = 57.375
+
+[voice.68.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.69]
+name = "jvs070"
+description = """
+小倉百人一首:
+  良暹法師
+  寂しさに宿を立ち出でて眺むればいづこも同じ秋の夕暮
+Element:
+  Ytterbium (Yb)
+"""
+average_pitch = 48.375
+
+[voice.69.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.70]
+name = "jvs071"
+description = """
+小倉百人一首:
+  大納言経信
+  夕されば門田の稲葉おとづれてあしのまろやに秋風ぞ吹く
+Element:
+  Lutetium (Lu)
+"""
+average_pitch = 45.375
+
+[voice.70.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.71]
+name = "jvs072"
+description = """
+小倉百人一首:
+  祐子内親王家紀伊
+  音に聞く高師の濱のあだ浪はかけじや袖のぬれもこそすれ
+Element:
+  Hafnium (Hf)
+"""
+average_pitch = 57.875
+
+[voice.71.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.72]
+name = "jvs073"
+description = """
+小倉百人一首:
+  権中納言匡房
+  高砂の尾の上の桜咲きにけり外山の霞立たずもあらなむ
+Element:
+  Tantalum (Ta)
+"""
+average_pitch = 49.375
+
+[voice.72.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.73]
+name = "jvs074"
+description = """
+小倉百人一首:
+  源俊頼朝臣
+  うかりける人を初瀬の山おろしはげしかれとは祈らぬものを
+Element:
+  Tungsten (W)
+"""
+average_pitch = 46.125
+
+[voice.73.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.74]
+name = "jvs075"
+description = """
+小倉百人一首:
+  藤原基俊
+  契りおきしさせもが露を命にてあはれ今年の秋も去ぬめり
+Element:
+  Rhenium (Re)
+"""
+average_pitch = 50.5
+
+[voice.74.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.75]
+name = "jvs076"
+description = """
+小倉百人一首:
+  法性寺入道前関白太政大臣
+  わたの原漕ぎ出でて見れば久方の雲居にまがふ沖つ白浪
+Element:
+  Osmium (Os)
+"""
+average_pitch = 49.625
+
+[voice.75.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.76]
+name = "jvs077"
+description = """
+小倉百人一首:
+  崇徳院
+  瀬を早み岩にせかるる瀧川のわれても末に逢はむとぞ思ふ
+Element:
+  Iridium (Ir)
+"""
+average_pitch = 50.875
+
+[voice.76.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.77]
+name = "jvs078"
+description = """
+小倉百人一首:
+  源兼昌
+  淡路島かよふ千鳥の鳴く声にいくよ寝覚めぬ須磨の関守
+Element:
+  Platinum (Pt)
+"""
+average_pitch = 45.125
+
+[voice.77.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.78]
+name = "jvs079"
+description = """
+小倉百人一首:
+  左京大夫顕輔
+  秋風にたなびく雲の絶え間よりもれ出づる月の影のさやけさ
+Element:
+  Gold (Au)
+"""
+average_pitch = 48.5
+
+[voice.78.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.79]
+name = "jvs080"
+description = """
+小倉百人一首:
+  待賢門院堀川
+  ながからむ心も知らず黒髪のみだれて今朝はものをこそ思へ
+Element:
+  Mercury (Hg)
+"""
+average_pitch = 50.875
+
+[voice.79.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.80]
+name = "jvs081"
+description = """
+小倉百人一首:
+  後徳大寺左大臣
+  ほととぎす鳴きつる方を眺むればただ有明の月ぞ残れる
+Element:
+  Thallium (Tl)
+"""
+average_pitch = 48.25
+
+[voice.80.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.81]
+name = "jvs082"
+description = """
+小倉百人一首:
+  道因法師
+  思ひわびさても命はあるものを憂きに堪へぬは涙なりけり
+Element:
+  Lead (Pb)
+"""
+average_pitch = 56.875
+
+[voice.81.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.82]
+name = "jvs083"
+description = """
+小倉百人一首:
+  皇太后宮大夫俊成
+  世の中よ道こそなけれ思ひ入る山の奥にも鹿ぞなくなる
+Element:
+  Bismuth (Bi)
+"""
+average_pitch = 59.0
+
+[voice.82.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.83]
+name = "jvs084"
+description = """
+小倉百人一首:
+  藤原清輔朝臣
+  ながらへばまた此の頃やしのばれむ憂しと見し世ぞ今は戀しき
+Element:
+  Polonium (Po)
+"""
+average_pitch = 56.875
+
+[voice.83.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.84]
+name = "jvs085"
+description = """
+小倉百人一首:
+  俊恵法師
+  夜もすがらもの思ふ頃は明けやらでねやのひまさへつれなかりけり
+Element:
+  Astatine (At)
+"""
+average_pitch = 58.5
+
+[voice.84.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.85]
+name = "jvs086"
+description = """
+小倉百人一首:
+  西行法師
+  嘆けとて月やはものを思はするかこち顔なるわが涙かな
+Element:
+  Radon (Rn)
+"""
+average_pitch = 48.125
+
+[voice.85.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.86]
+name = "jvs087"
+description = """
+小倉百人一首:
+  寂蓮法師
+  村雨の露もまだひぬ槇の葉に霧立ちのぼる秋の夕暮
+Element:
+  Francium (Fr)
+"""
+average_pitch = 50.625
+
+[voice.86.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.87]
+name = "jvs088"
+description = """
+小倉百人一首:
+  皇嘉門院別当
+  難波江のあしのかりねの一夜ゆゑみをつくしてや戀ひわたるべき
+Element:
+  Radium (Ra)
+"""
+average_pitch = 47.875
+
+[voice.87.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.88]
+name = "jvs089"
+description = """
+小倉百人一首:
+  式子内親王
+  玉の緒よたえなば絶えねながらへば忍ぶることの弱りもぞする
+Element:
+  Actinium (Ac)
+"""
+average_pitch = 46.875
+
+[voice.88.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.89]
+name = "jvs090"
+description = """
+小倉百人一首:
+  殷富門院大輔
+  見せばやな雄島のあまの袖だにも濡れにぞ濡れし色はかはらず
+Element:
+  Thorium (Th)
+"""
+average_pitch = 60.25
+
+[voice.89.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.90]
+name = "jvs091"
+description = """
+小倉百人一首:
+  後京極摂政前太政大臣
+  きりぎりすなくや霜夜のさむしろに衣かたしき獨りかも寝む
+Element:
+  Protactinium (Pa)
+"""
+average_pitch = 56.625
+
+[voice.90.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.91]
+name = "jvs092"
+description = """
+小倉百人一首:
+  二条院讃岐
+  わが袖は汐干に見えぬ沖の石の人こそ知らね乾く間もなし
+Element:
+  Uranium (U)
+"""
+average_pitch = 55.625
+
+[voice.91.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.92]
+name = "jvs093"
+description = """
+小倉百人一首:
+  鎌倉右大臣
+  世の中は常にもがもな渚こぐ海士の小舟の綱手かなしも
+Element:
+  Neptunium (Np)
+"""
+average_pitch = 60.375
+
+[voice.92.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.93]
+name = "jvs094"
+description = """
+小倉百人一首:
+  参議雅経
+  みよしのの山の秋風小夜更けて故郷寒く衣うつなり
+Element:
+  Plutonium (Pu)
+"""
+average_pitch = 56.875
+
+[voice.93.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.94]
+name = "jvs095"
+description = """
+小倉百人一首:
+  前大僧正慈圓
+  おほけなくうき世の民におほふかな我が立つ杣に墨染の袖
+Element:
+  Americium (Am)
+"""
+average_pitch = 57.375
+
+[voice.94.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.95]
+name = "jvs096"
+description = """
+小倉百人一首:
+  入道前太政大臣
+  花さそふあらしの庭の雪ならでふりゆくものは我が身なりけり
+Element:
+  Curium (Cm)
+"""
+average_pitch = 58.75
+
+[voice.95.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.96]
+name = "jvs097"
+description = """
+小倉百人一首:
+  権中納言定家
+  来ぬ人を松帆の浦の夕なぎに焼くや藻塩の身もこがれつつ
+Element:
+  Berkelium (Bk)
+"""
+average_pitch = 51.875
+
+[voice.96.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.97]
+name = "jvs098"
+description = """
+小倉百人一首:
+  従二位家隆
+  風そよぐ楢の小川の夕ぐれはみそぎぞ夏のしるしなりける
+Element:
+  Californium (Cf)
+"""
+average_pitch = 53.375
+
+[voice.97.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.98]
+name = "jvs099"
+description = """
+小倉百人一首:
+  後鳥羽院
+  人もをし人もうらめしあぢきなく世を思ふ故にもの思ふ身は
+Element:
+  Einsteinium (Es)
+"""
+average_pitch = 51.25
+
+[voice.98.portrait]
+path = "noimage.png"
+description = """
+"""
+
+[voice.99]
+name = "jvs100"
+description = """
+小倉百人一首:
+  順徳院
+  百敷や古き軒端のしのぶにもなほあまりある昔なりけり
+Element:
+  Fermium (Fm)
+"""
+average_pitch = 47.25
+
+[voice.99.portrait]
+path = "noimage.png"
+description = """
+"""

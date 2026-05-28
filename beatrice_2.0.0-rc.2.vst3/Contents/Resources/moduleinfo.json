@@ -1,0 +1,44 @@
+{
+  "Name": "beatrice_2.0.0-rc.2",
+  "Version": "2.0.0",
+  "Factory Info": {
+    "Vendor": "Project Beatrice",
+    "URL": "prj-beatrice.com",
+    "E-Mail": "167534685+prj-beatrice@users.noreply.github.com",
+    "Flags": {
+      "Unicode": true,
+      "Classes Discardable": false,
+      "Component Non Discardable": false,
+    },
+  },
+  "Classes": [
+    {
+      "CID": "45D229D9621A4339A23EDE3EDA38AC89",
+      "Category": "Audio Module Class",
+      "Name": "Beatrice_2.0.0-rc.2",
+      "Vendor": "Project Beatrice",
+      "Version": "2.0.0-rc.2",
+      "SDKVersion": "VST 3.8.0",
+      "Sub Categories": [
+        "Fx",
+        "Vocals",
+      ],
+      "Class Flags": 1,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+    {
+      "CID": "1AC08FF1362A44A2B40951AD8D10896C",
+      "Category": "Component Controller Class",
+      "Name": "Beatrice_2.0.0-rc.2Controller",
+      "Vendor": "Project Beatrice",
+      "Version": "2.0.0-rc.2",
+      "SDKVersion": "VST 3.8.0",
+      "Class Flags": 0,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+  ],
+}

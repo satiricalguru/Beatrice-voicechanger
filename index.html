@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project Beatrice – Real-time AI voice changer with 100 JVS corpus speakers, pitch/formant shifting, and PortAudio routing.">
+  <title>Project Beatrice – AI Voice Changer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- macOS-style titlebar — traffic lights live on the far left -->
+  <div class="window-titlebar" role="banner" aria-label="Application title bar">
+    <div class="traffic-lights-spacer" aria-hidden="true"></div>
+    <div class="window-title">PROJECT BEATRICE · AI VOICE CHANGER</div>
+  </div>
+
+  <div class="app-container">
+    <!-- Sidebar Controls -->
+    <aside class="sidebar" role="complementary" aria-label="Voice changer controls">
+
+      <div class="brand-section">
+        <div class="brand-logo" aria-hidden="true">B</div>
+        <div class="brand-details">
+          <p class="brand-name">BEATRICE</p>
+          <span>Real-time DSP Engine v2.0.0</span>
+        </div>
+      </div>
+
+      <!-- Power Toggle -->
+      <div class="power-container card">
+        <div class="power-header">
+          <span class="control-label">Voice Changer</span>
+          <div class="bypass-indicator active" id="bypass-status" role="status" aria-live="polite">BYPASSED</div>
+        </div>
+        <button class="btn-power active" id="power-toggle" aria-pressed="false" aria-label="Toggle voice changer bypass">
+          <svg class="power-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 3v9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M6.4 5.4A9 9 0 1 0 17.6 5.4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="btn-power-label" id="power-label">BYPASSED</span>
+        </button>
+      </div>
+
+      <!-- Audio Routing -->
+      <div class="control-group card" role="group" aria-labelledby="audio-routing-heading">
+        <h2 class="control-group-heading" id="audio-routing-heading">Audio Routing</h2>
+
+        <!-- Input Selector -->
+        <div class="select-container">
+          <label class="control-label" for="input-device-select">Input Microphone</label>
+          <div class="select-wrapper">
+            <select id="input-device-select" class="dropdown-select">
+              <option value="null">Default Microphone</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Output Selector -->
+        <div class="select-container">
+          <label class="control-label" for="output-device-select">Output Device</label>
+          <div class="select-wrapper">
+            <select id="output-device-select" class="dropdown-select">
+              <option value="null">Default Speaker</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Hear Yourself Toggle -->
+        <div class="toggle-container">
+          <label class="control-label" for="hear-yourself-toggle">Hear Yourself</label>
+          <label class="switch" aria-label="Toggle hear yourself monitoring">
+            <input type="checkbox" id="hear-yourself-toggle">
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+
+        <!-- Monitor Selector (shown only when Hear Yourself is on) -->
+        <div class="select-container" id="monitor-container" style="display: none;" aria-hidden="true">
+          <label class="control-label" for="monitor-device-select">Monitor Device</label>
+          <div class="select-wrapper">
+            <select id="monitor-device-select" class="dropdown-select">
+              <option value="null">Default Headphones</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Controls -->
+      <div class="control-group card" role="group" aria-labelledby="input-controls-heading">
+        <h2 class="control-group-heading" id="input-controls-heading">Input Controls</h2>
+
+        <!-- Noise Gate -->
+        <div class="slider-container">
+          <div class="slider-header">
+            <label class="control-label" for="gate-slider">Noise Gate</label>
+            <span class="slider-val" id="gate-val" aria-live="polite">0.010</span>
+          </div>
+          <input type="range" min="0" max="0.1" step="0.001" value="0.01" class="slider" id="gate-slider"
+                 aria-label="Noise gate threshold" aria-valuemin="0" aria-valuemax="0.1" aria-valuenow="0.01">
+        </div>
+
+        <!-- Input Level Meter -->
+        <div class="meter-container" role="meter" aria-label="Input audio level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="slider-header">
+            <span class="control-label">Input Level</span>
+            <span class="meter-db-val" id="input-db-val">—</span>
+          </div>
+          <div class="meter-bar-bg">
+            <div class="meter-bar-fill" id="input-meter-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DSP Modifiers -->
+      <div class="control-group card" role="group" aria-labelledby="dsp-heading">
+        <h2 class="control-group-heading" id="dsp-heading">DSP Modifiers</h2>
+
+        <!-- Pitch Shift -->
+        <div class="slider-container">
+          <div class="slider-header">
+            <label class="control-label" for="pitch-slider">Pitch Shift</label>
+            <span class="slider-val" id="pitch-val" aria-live="polite">0.0 st</span>
+          </div>
+          <input type="range" min="-12" max="12" step="0.5" value="0" class="slider" id="pitch-slider"
+                 aria-label="Pitch shift in semitones" aria-valuemin="-12" aria-valuemax="12" aria-valuenow="0">
+          <div class="slider-ticks" aria-hidden="true">
+            <span>−12</span>
+            <span>0</span>
+            <span>+12</span>
+          </div>
+        </div>
+
+        <!-- Formant Shift -->
+        <div class="slider-container">
+          <div class="slider-header">
+            <label class="control-label" for="formant-slider">Formant Shift</label>
+            <span class="slider-val" id="formant-val" aria-live="polite">0.0</span>
+          </div>
+          <input type="range" min="-1.5" max="1.5" step="0.1" value="0" class="slider" id="formant-slider"
+                 aria-label="Formant shift" aria-valuemin="-1.5" aria-valuemax="1.5" aria-valuenow="0">
+          <div class="slider-ticks" aria-hidden="true">
+            <span>−1.5</span>
+            <span>0</span>
+            <span>+1.5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Output Controls -->
+      <div class="control-group card" role="group" aria-labelledby="output-heading">
+        <h2 class="control-group-heading" id="output-heading">Output Controls</h2>
+
+        <!-- Output Gain -->
+        <div class="slider-container">
+          <div class="slider-header">
+            <label class="control-label" for="volume-slider">Output Volume</label>
+            <span class="slider-val" id="volume-val" aria-live="polite">100%</span>
+          </div>
+          <input type="range" min="0" max="2" step="0.05" value="1" class="slider" id="volume-slider"
+                 aria-label="Output volume" aria-valuemin="0" aria-valuemax="200" aria-valuenow="100">
+        </div>
+
+        <!-- Output Level Meter -->
+        <div class="meter-container" role="meter" aria-label="Output audio level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="slider-header">
+            <span class="control-label">Output Level</span>
+            <span class="meter-db-val" id="output-db-val">—</span>
+          </div>
+          <div class="meter-bar-bg">
+            <div class="meter-bar-fill output-fill" id="output-meter-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend Status Footer -->
+      <div class="sidebar-footer" role="status" aria-live="polite">
+        <div class="conn-dot" id="conn-dot" aria-hidden="true"></div>
+        <span class="conn-label" id="conn-label">Connecting…</span>
+      </div>
+
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content" role="main">
+      <!-- Search & Stats Bar -->
+      <div class="top-bar">
+        <div class="search-container" role="search">
+          <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M13 13l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <input type="search" placeholder="Search 100 voices by name or element…" class="search-input" id="search-box"
+                 aria-label="Search voices" autocomplete="off" spellcheck="false">
+          <span class="search-count" id="search-count" aria-live="polite"></span>
+        </div>
+        <div class="status-panel" role="status">
+          <div class="status-item" id="stream-status-item">
+            <span class="status-dot" id="stream-dot"></span>
+            <span class="status-text" id="stream-status-text">Waiting for backend…</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Buffer:</span>
+            <span class="status-val">160 spl · 10 ms</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page heading — one h1 per page for SEO -->
+      <div class="content-header">
+        <h1>Target Voices</h1>
+        <p>Select a JVS speaker to morph your voice. Each speaker maps to a unique chemical element in the periodic table.</p>
+      </div>
+
+      <!-- Speakers Grid Container -->
+      <div class="speakers-grid" id="speakers-grid" role="listbox" aria-label="Available target voices">
+        <!-- Dynamically populated via renderer.js -->
+        <div class="loading-state" id="loading-state">
+          <div class="spinner" aria-hidden="true"></div>
+          <p>Loading 100 speaker profiles…</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

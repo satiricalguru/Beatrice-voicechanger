@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+*.DS_Store
+__MACOSX/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Electron build output
+dist/
+out/
+build/
+release/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.env
+.venv
+env/
+venv/
+
+# Logs
+*.log
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,20 @@
+{
+  "name": "beatrice-voice-changer",
+  "version": "2.0.0-rc.2",
+  "description": "Real-time AI voice changer powered by the Beatrice DSP engine and JVS corpus speakers",
+  "main": "main.js",
+  "homepage": "https://github.com/satiricalguru/beatrice-voicechanger",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/satiricalguru/beatrice-voicechanger.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dev":   "electron . --enable-logging"
+  },
+  "keywords": ["voice-changer", "beatrice", "real-time", "DSP", "electron", "ai"],
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^30.0.0"
+  }
+}
