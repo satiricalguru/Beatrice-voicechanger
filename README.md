@@ -34,6 +34,16 @@
 
 ---
 
+## Screenshots
+
+<img width="1462" height="860" alt="Screenshot 2026-05-28 at 10 29 46 PM" src="https://github.com/user-attachments/assets/61564043-ec9e-46f9-8b7d-7a6d65dce136" />
+
+
+
+
+
+---
+
 ## 🚀 Setup & Run
 
 ```bash
@@ -113,7 +123,7 @@ Click any speaker card in the main grid to switch your target voice. All 100 voi
 - **Voice Changer UI/backend** — Inspired by [w-okada/voice-changer](https://github.com/w-okada/voice-changer)
 - **JVS Corpus** — [Shinnosuke Takamichi, UTokyo](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)
   - Non-commercial use only. See `LICENSE.txt` and `LICENSES_BUNDLED.txt`.
-
+- **Developed by Satirical Guru , Claude & Antigravity .
 ---
 
 ## ⚠️ Disclaimer
