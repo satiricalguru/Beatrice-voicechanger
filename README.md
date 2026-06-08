@@ -164,7 +164,7 @@ When **Hear Yourself** is enabled, soundboard audio also plays through your moni
                      │ HTTP REST (127.0.0.1:5005)
                      ▼
 ┌──────────────────────────────────────────────┐
-│         Python Audio Backend                  │
+│         Python Audio Backend                 │
 │         beatrice_audio.py                    │
 │   ┌──────────────────────────────────────┐   │
 │   │ PortAudio I/O (sounddevice)          │   │
