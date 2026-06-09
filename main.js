@@ -44,11 +44,17 @@ function createWindow() {
 }
 
 function startBackend() {
-  const scriptPath = path.join(__dirname, 'beatrice_audio.py');
+  // When packaged, __dirname points inside the .asar virtual filesystem which
+  // Python cannot access. Use the unpacked path instead so the script exists
+  // as a real file on disk.
+  const appDir = app.isPackaged
+    ? app.getAppPath().replace('app.asar', 'app.asar.unpacked')
+    : __dirname;
+  const scriptPath = path.join(appDir, 'beatrice_audio.py');
   console.log('[Beatrice] Spawning Python audio backend:', scriptPath);
 
   pythonProcess = spawn('python3', ['-u', scriptPath], {
-    cwd: __dirname,
+    cwd: appDir,
   });
 
   pythonProcess.stdout.on('data', data =>

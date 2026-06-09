@@ -34,6 +34,13 @@
     "directories": {
       "output": "dist"
     },
+    "asarUnpack": [
+      "beatrice_audio.py",
+      "beatrice_loader.py",
+      "requirements.txt",
+      "beatrice_paraphernalia_jvs/**/*",
+      "beatrice_2.0.0-rc.2.vst3/**/*"
+    ],
     "files": [
       "main.js",
       "renderer.js",
