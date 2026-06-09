@@ -53,7 +53,23 @@ function startBackend() {
   const scriptPath = path.join(appDir, 'beatrice_audio.py');
   console.log('[Beatrice] Spawning Python audio backend:', scriptPath);
 
-  pythonProcess = spawn('python3', ['-u', scriptPath], {
+  let spawnCmd = 'python3';
+  let spawnArgs = ['-u', scriptPath];
+
+  if (process.platform === 'darwin') {
+    try {
+      const { execSync } = require('child_process');
+      const isArm = execSync('sysctl -in hw.optional.arm64').toString().trim() === '1';
+      if (isArm) {
+        spawnCmd = 'arch';
+        spawnArgs = ['-arm64', 'python3', '-u', scriptPath];
+      }
+    } catch (e) {
+      console.error('[Beatrice] Failed to check for Apple Silicon:', e);
+    }
+  }
+
+  pythonProcess = spawn(spawnCmd, spawnArgs, {
     cwd: appDir,
   });
 
