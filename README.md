@@ -13,6 +13,8 @@
 
 **Morph your voice in real-time** using 100 AI speakers from the JVS corpus — powered by the Beatrice 2.0.0-rc.2 DSP engine with sub-10ms latency.
 
+> **🖥️ Windows Version:** If you want to download or build the Windows version, check out the [Beatrice Windows Repository](https://github.com/satiricalguru/BeatriceVST-voicechanger.git).
+> 
 </div>
 
 ---
