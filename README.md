@@ -73,7 +73,7 @@
 | sounddevice | `pip install sounddevice` |
 | numpy | `pip install numpy` |
 
-> **Note:** The Beatrice VST3 library (`beatrice_2.0.0-rc.2.vst3`) is a **macOS-only** native binary. Windows/Linux are not supported in this release.
+> **Note:** The Beatrice VST3 library (`beatrice_2.0.0-rc.2.vst3`) is a **macOS-only** native binary. Windows/Linux are not supported in this repository. If you are looking for the Windows version, please refer to the [BeatriceVST-voicechanger](https://github.com/satiricalguru/BeatriceVST-voicechanger) repository.
 
 ---
 
@@ -118,7 +118,7 @@ npm start
 | `numpy` | 1.24+ | DSP math |
 | `soundfile` | 0.12+ | Soundboard audio decoding |
 
-> **Note:** The Beatrice VST3 library is a **macOS-only** signed binary. Windows/Linux are not supported.
+> **Note:** The Beatrice VST3 library is a **macOS-only** signed binary. Windows/Linux are not supported in this repository. If you are looking for the Windows version, please refer to the [BeatriceVST-voicechanger](https://github.com/satiricalguru/BeatriceVST-voicechanger) repository.
 
 ---
 
