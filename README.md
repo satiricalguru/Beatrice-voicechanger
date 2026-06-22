@@ -96,6 +96,25 @@ npm start
 
 ---
 
+## How to Use & Audio Routing Guide
+
+To route your morphed voice to third-party applications (like Discord, Zoom, or OBS), follow these steps:
+
+1. **Set Input Microphone**: Select your physical input microphone (e.g., built-in microphone, USB headset mic) from the **Input Microphone** dropdown in the sidebar.
+2. **Setup a Virtual Microphone**:
+   - You will need a virtual audio loopback driver to act as a bridge between the voice changer and other applications.
+   - **macOS**: Download and install [BlackHole 2ch](https://existential.audio/blackhole/).
+   - **Windows**: Download and install a virtual loopback device such as [VB-Cable](https://vb-audio.com/Cable/).
+3. **Set Output Device**: In the app, select the virtual microphone (e.g., **BlackHole 2ch** or **CABLE Input**) as your **Output Device**.
+4. **Target Application Configuration**: In the target application (e.g., Discord, Zoom), select the virtual microphone (e.g., **BlackHole 2ch** or **CABLE Output**) as its **Input Device**.
+5. **Testing (Hear Yourself)**:
+   - Toggle the **Hear Yourself** switch to **ON** if you want to test and monitor your morphed voice.
+   - Select your physical monitoring/hearing device (e.g., your headphones or speakers) from the dropdown list next to it.
+6. **Optimize Voice Quality (Noise Gate)**:
+   - Set the **Noise Gate** threshold to its lowest value (`0.000`) for the best continuous and natural voice conversion without quiet parts getting cut off.
+
+---
+
 ## Requirements
 
 | Dependency | Version | Purpose |
