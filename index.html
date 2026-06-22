@@ -201,9 +201,21 @@
       </nav>
 
       <section id="tab-voices" class="tab-section active" role="tabpanel">
-        <div class="content-header">
-          <h1 data-i18n="voices_title">Target Voices</h1>
-          <p data-i18n="voices_desc">Select a JVS speaker to morph your voice. Each speaker maps to a unique chemical element.</p>
+        <div class="content-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; width:100%;">
+          <div>
+            <h1 data-i18n="voices_title">Target Voices</h1>
+            <p id="voices-desc" data-i18n="voices_desc">Select a JVS speaker to morph your voice. Each speaker maps to a unique chemical element.</p>
+          </div>
+          <div class="select-container" style="margin:0; min-width:260px;">
+            <label class="control-label" for="model-select">Voice Model</label>
+            <div class="select-wrapper">
+              <select id="model-select" class="dropdown-select">
+                <option value="jvs">JVS Corpus (100 Voices)</option>
+                <option value="official_1">Official Model 1 (Tsukuyomichan / Tokinashigure / OLUNE)</option>
+                <option value="old_tts">Classic Old TTS (8 Voices)</option>
+              </select>
+            </div>
+          </div>
         </div>
         <div class="speakers-grid" id="speakers-grid" role="listbox" aria-label="Available target voices">
           <div class="loading-state" id="loading-state">

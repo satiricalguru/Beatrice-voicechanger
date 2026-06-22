@@ -15,6 +15,25 @@ const STORAGE_KEY_THEME = 'beatrice_theme';
 const STORAGE_KEY_MODE  = 'beatrice_color_mode';
 const STORAGE_KEY_SB    = 'beatrice_soundboard';
 const STORAGE_KEY_LANG  = 'beatrice_language';
+const STORAGE_KEY_MODEL = 'beatrice_active_model';
+
+const AVAILABLE_MODELS = {
+  jvs: {
+    name: "JVS Corpus (100 Voices)",
+    folder: "beatrice_paraphernalia_jvs",
+    toml: "beatrice_paraphernalia_jvs.toml"
+  },
+  official_1: {
+    name: "Official Model 1 (Tsukuyomichan / Tokinashigure / OLUNE)",
+    folder: "beatrice_paraphernalia_official_1",
+    toml: "beatrice_paraphernalia_official_1.toml"
+  },
+  old_tts: {
+    name: "Classic Old TTS (8 Voices)",
+    folder: "beatrice_paraphernalia_old_tts",
+    toml: "beatrice_paraphernalia_old_tts.toml"
+  }
+};
 
 // When packaged, __dirname contains 'app.asar' (the virtual archive path).
 // Files in extraResources land at process.resourcesPath (Contents/Resources/).
@@ -469,9 +488,13 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 // ════════════════════════════════════════════════════════════
 function loadSpeakerData() {
   try {
-    const tomlPath = path.join(APP_BASE, 'beatrice_paraphernalia_jvs', 'beatrice_paraphernalia_jvs.toml');
+    let activeModel = localStorage.getItem(STORAGE_KEY_MODEL) || 'jvs';
+    if (!AVAILABLE_MODELS[activeModel]) activeModel = 'jvs';
+
+    const modelInfo = AVAILABLE_MODELS[activeModel];
+    const tomlPath = path.join(APP_BASE, modelInfo.folder, modelInfo.toml);
     if (!fs.existsSync(tomlPath)) {
-      showSpeakerError('Model config file not found. Please check beatrice_paraphernalia_jvs/');
+      showSpeakerError(`Model config file not found. Please check ${modelInfo.folder}/`);
       return;
     }
     const tomlText = fs.readFileSync(tomlPath, 'utf8');
@@ -480,6 +503,22 @@ function loadSpeakerData() {
     if (speakerProfiles.length === 0) {
       showSpeakerError('No speaker profiles found in TOML config.');
       return;
+    }
+
+    // Dynamic description and placeholder polish
+    const descEl = document.getElementById('voices-desc');
+    if (descEl) {
+      if (activeModel === 'official_1') {
+        descEl.textContent = 'Select Tsukuyomichan, Tokinashigure, or OLUNE to morph your voice.';
+      } else if (activeModel === 'old_tts') {
+        descEl.textContent = 'Select classic old TTS voices like Paul, BonziBuddy, or Mary to morph your voice.';
+      } else {
+        descEl.textContent = 'Select a JVS speaker to morph your voice. Each speaker maps to a unique chemical element.';
+      }
+    }
+    const searchBox = document.getElementById('search-box');
+    if (searchBox) {
+      searchBox.placeholder = `Search ${speakerProfiles.length} voices...`;
     }
 
     renderSpeakers(speakerProfiles);
@@ -577,11 +616,29 @@ function renderSpeakers(profiles) {
   }
 
   const frag = document.createDocumentFragment();
+  const activeModel = localStorage.getItem(STORAGE_KEY_MODEL) || 'jvs';
 
   profiles.forEach((speaker, i) => {
-    const elemStr = extractElement(speaker.description);
+    let elemStr = extractElement(speaker.description);
+    if (activeModel === 'official_1') {
+      if (speaker.name.includes('UTAU')) elemStr = 'UTAU';
+      else if (speaker.name.includes('コーパス')) elemStr = 'Corpus';
+      else if (speaker.name.includes('刻鳴時雨')) elemStr = 'Character';
+      else if (speaker.name.includes('OLUNE')) elemStr = 'Character';
+      else elemStr = 'Official';
+    } else if (activeModel === 'old_tts') {
+      if (speaker.name.includes('mary')) elemStr = 'Female';
+      else if (speaker.name.includes('mike') || speaker.name.includes('adult male') || speaker.name.includes('paul') || speaker.name.includes('sam')) elemStr = 'Male';
+      else if (speaker.name.includes('speak')) elemStr = 'Hardware';
+      else elemStr = 'TTS';
+    }
     const hue     = elementHue(elemStr);
-    const jvsId   = `JVS-${String(speaker.index + 1).padStart(3, '0')}`;
+    let speakerIdLabel = `JVS-${String(speaker.index + 1).padStart(3, '0')}`;
+    if (activeModel === 'official_1') {
+      speakerIdLabel = `OFFICIAL-${speaker.index + 1}`;
+    } else if (activeModel === 'old_tts') {
+      speakerIdLabel = `RETRO-${speaker.index + 1}`;
+    }
     const isActive = speaker.index === activeSpeakerIndex;
     const firstLine = speaker.description.split('\n').find(l => l.trim() && !l.trim().startsWith('Element:')) || '';
 
@@ -597,7 +654,7 @@ function renderSpeakers(profiles) {
       <div class="speaker-elem-tag"
            style="background:hsl(${hue},60%,50%,0.14);color:hsl(${hue},80%,72%);border-color:hsl(${hue},60%,60%,0.22);"
            aria-hidden="true">${elemStr}</div>
-      <div class="speaker-id">${jvsId}</div>
+      <div class="speaker-id">${speakerIdLabel}</div>
       <div class="speaker-name">${speaker.name}</div>
       <div class="speaker-desc">${firstLine.trim()}</div>
       <div class="speaker-pitch">
@@ -889,6 +946,17 @@ async function pollBackendStatus() {
       voiceChangerBypass = status.bypass;
       applyBypassUI(voiceChangerBypass);
     }
+    
+    // Sync active speaker selection index from backend if not set locally
+    if (activeSpeakerIndex === null && typeof status.speaker_index === 'number' && status.speaker_index !== -1) {
+      const card = document.getElementById(`speaker-card-${status.speaker_index}`);
+      if (card) {
+        activeSpeakerIndex = status.speaker_index;
+        card.classList.add('active');
+        card.setAttribute('aria-selected', 'true');
+        card.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    }
   } catch {
     setBackendStatus(false);
   }
@@ -901,6 +969,28 @@ loadSavedTheme();
 loadSavedLanguage();
 loadSoundboard();
 renderSoundboardMain();
+
+// Initialize model selection UI and bindings
+const savedModel = localStorage.getItem(STORAGE_KEY_MODEL) || 'jvs';
+const modelSelect = document.getElementById('model-select');
+if (modelSelect) {
+  modelSelect.value = savedModel;
+  // Sync the backend with the saved model selection on startup
+  fetch(`${BACKEND_URL}/set_model?model=${savedModel}`).catch(() => {});
+  
+  modelSelect.addEventListener('change', () => {
+    const newModel = modelSelect.value;
+    localStorage.setItem(STORAGE_KEY_MODEL, newModel);
+    fetch(`${BACKEND_URL}/set_model?model=${newModel}`)
+      .then(() => {
+        // Reset local active selection index to 0
+        activeSpeakerIndex = 0;
+        loadSpeakerData();
+      })
+      .catch(err => console.error('[Beatrice] Error setting model:', err));
+  });
+}
+
 loadSpeakerData();
 applyBypassUI(voiceChangerBypass);
 setInterval(pollBackendStatus, 250);

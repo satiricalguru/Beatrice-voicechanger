@@ -11,7 +11,7 @@
 
 <img src="beatrice_paraphernalia_jvs/noimage.png" width="140" alt="Beatrice Logo" />
 
-**Morph your voice in real-time** using 100 AI speakers from the JVS corpus — powered by the Beatrice 2.0.0-rc.2 DSP engine with sub-10ms latency.
+**Morph your voice in real-time** using multiple voice models (JVS Corpus, Official Model 1, and Classic Old TTS) — powered by the Beatrice 2.0.0-rc.2 DSP engine with sub-10ms latency.
 
 > **🖥️ Windows Version:** If you want to download or build the Windows version, check out the [Beatrice Windows Repository](https://github.com/satiricalguru/BeatriceVST-voicechanger.git).
 > 
@@ -26,7 +26,8 @@
 <td width="50%">
 
 ### 🎤 Voice Conversion
-- **100 target voices** — each mapped to a chemical element
+- **Multiple Voice Models** — JVS Corpus (100 voices), Official Model 1 (4 voices), and Classic Old TTS (8 retro voices)
+- **Dynamic switching** between models at runtime without restarting the app
 - Real-time DSP pipeline at **16 kHz / 10ms latency**
 - Pitch shift (−12 to +12 semitones)
 - Formant shift (−1.5 to +1.5)
@@ -62,20 +63,6 @@
 </td>
 </tr>
 </table>
-
----
-
-## 🖥️ Requirements
-
-| Dependency | Version |
-|---|---|
-| macOS | 12 Monterey or later (Apple Silicon or Intel) |
-| Node.js | 18+ |
-| Python | 3.9+ |
-| sounddevice | `pip install sounddevice` |
-| numpy | `pip install numpy` |
-
-> **Note:** The Beatrice VST3 library (`beatrice_2.0.0-rc.2.vst3`) is a **macOS-only** native binary. Windows/Linux are not supported in this repository. If you are looking for the Windows version, please refer to the [BeatriceVST-voicechanger](https://github.com/satiricalguru/BeatriceVST-voicechanger) repository.
 
 ---
 
@@ -199,11 +186,10 @@ beatrice-voicechanger/
 ├── requirements.txt           # Python dependencies
 ├── icon.png                   # App icon
 ├── soundboard_audio/          # Uploaded soundboard files (gitignored)
-├── beatrice_2.0.0-rc.2.vst3/ # Native Beatrice DSP library
-└── beatrice_paraphernalia_jvs/
-    ├── *.bin                  # Model weights
-    ├── speaker_embeddings.bin # 101 speaker profiles
-    └── noimage.png            # Placeholder
+├── beatrice_2.0.0-rc.2.vst3/             # Native Beatrice DSP library
+├── beatrice_paraphernalia_jvs/           # JVS Corpus Model (100 voices)
+├── beatrice_paraphernalia_official_1/     # Official Model 1 (Tsukuyomichan / Tokinashigure / OLUNE)
+└── beatrice_paraphernalia_old_tts/       # Classic Old TTS Model (8 retro voices)
 ```
 
 ## Credits & Acknowledgements
@@ -225,6 +211,7 @@ The Python backend exposes a REST API on `127.0.0.1:5005`:
 | `/status` | GET | Current state: bypass, meters, devices, params |
 | `/devices` | GET | List all PortAudio devices |
 | `/set_config?...` | GET | Update any parameter (see below) |
+| `/set_model?model=...` | GET | Switch active model (e.g. `jvs`, `official_1`, `old_tts`) |
 | `/play_sound?file_path=...&hear_yourself=...` | GET | Play a soundboard file |
 | `/stop_sound` | GET | Stop current soundboard playback |
 
