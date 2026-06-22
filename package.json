@@ -39,6 +39,8 @@
       "beatrice_loader.py",
       "requirements.txt",
       "beatrice_paraphernalia_jvs/**/*",
+      "beatrice_paraphernalia_official_1/**/*",
+      "beatrice_paraphernalia_old_tts/**/*",
       "beatrice_2.0.0-rc.2.vst3/**/*"
     ],
     "files": [
@@ -52,12 +54,28 @@
       "icon.png",
       "icon.icns",
       "beatrice_paraphernalia_jvs/**/*",
+      "beatrice_paraphernalia_official_1/**/*",
+      "beatrice_paraphernalia_old_tts/**/*",
       "beatrice_2.0.0-rc.2.vst3/**/*"
     ],
     "extraResources": [
       {
         "from": "beatrice_paraphernalia_jvs",
         "to": "beatrice_paraphernalia_jvs",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "beatrice_paraphernalia_official_1",
+        "to": "beatrice_paraphernalia_official_1",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "beatrice_paraphernalia_old_tts",
+        "to": "beatrice_paraphernalia_old_tts",
         "filter": [
           "**/*"
         ]
