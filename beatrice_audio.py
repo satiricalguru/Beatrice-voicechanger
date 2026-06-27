@@ -515,8 +515,11 @@ class ControlHandler(BaseHTTPRequestHandler):
             stop_soundboard_audio()
             self.wfile.write(json.dumps({"status": "stopped"}).encode())
 
+class ReusableHTTPServer(HTTPServer):
+    allow_reuse_address = True
+
 def run_http_server():
-    server = HTTPServer(('127.0.0.1', 5005), ControlHandler)
+    server = ReusableHTTPServer(('127.0.0.1', 5005), ControlHandler)
     print("[*] Control API Server running at http://127.0.0.1:5005")
     server.serve_forever()
 
