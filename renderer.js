@@ -1648,8 +1648,15 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.setAttribute('aria-selected', 'true');
     const target = document.getElementById(`tab-${btn.dataset.tab}`);
     if (target) target.classList.add('active');
+
+    // Hide floating control bar on Settings tab
+    const fcBar = document.getElementById('floating-control-bar');
+    if (fcBar) {
+      fcBar.style.display = btn.dataset.tab === 'settings-view' ? 'none' : '';
+    }
   });
 });
+
 
 // ════════════════════════════════════════════════════════════
 // TOML SPEAKER LOADER
