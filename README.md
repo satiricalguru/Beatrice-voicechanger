@@ -115,7 +115,7 @@
 </p>
 
 <p align="center">
-  <img alt="Settings — Themes, light/dark mode and language selector (Chinese UI)" src="assets/screenshot_settings.png" width="100%"/>
+ <img width="2904" height="1606" alt="image" src="https://github.com/user-attachments/assets/951329b7-41be-4ea1-8d3a-66ef4b38b330" />
   <br/><sub>⚙️ <b>Settings</b> — 6 handcrafted themes, light/dark mode, and 3 languages (Chinese shown)</sub>
 </p>
 
@@ -224,8 +224,8 @@ my_model/
 │                  Electron UI                     │
 │       index.html + index.css + renderer.js       │
 │  ┌──────────────────┐  ┌────────────────────┐    │
-│  │  Voice Grid       │  │  Soundboard        │    │
-│  │  (112+ voices)    │  │  (upload → play)   │    │
+│  │  Voice Grid      │  │  Soundboard        │    │
+│  │  (112+ voices)   │  │  (upload → play)   │    │
 │  └──────────────────┘  └────────────────────┘    │
 └──────────────────────┬───────────────────────────┘
                        │ HTTP REST (127.0.0.1:5005)
@@ -236,7 +236,7 @@ my_model/
 │  ┌────────────────────────────────────────────┐  │
 │  │  PortAudio I/O (sounddevice)               │  │
 │  │  Beatrice VST3 ctypes wrapper              │  │
-│  │  Phone Extractor → Pitch → Waveform DSP   │  │
+│  │  Phone Extractor → Pitch → Waveform DSP    │  │
 │  │  Soundboard playback (soundfile)           │  │
 │  └────────────────────────────────────────────┘  │
 └──────────────────────┬───────────────────────────┘
@@ -323,7 +323,7 @@ The Python backend exposes a local REST API on `http://127.0.0.1:5005`:
 
 The voice changer UI and Python backend are MIT-licensed. The Beatrice DSP engine is licensed separately under the [prj-beatrice project](https://github.com/prj-beatrice/beatrice-vst).
 
-> ⚠️ **JVS Corpus:** Speaker data is licensed for **non-commercial use only**. See `LICENSE.txt` and `LICENSES_BUNDLED.txt` for full details.
+> ⚠️ **JVS Corpus:** Speaker data is licensed for **non-commercial use only**. See `LICENSE` and `Contributors.txt` for full details.
 
 ---
 
