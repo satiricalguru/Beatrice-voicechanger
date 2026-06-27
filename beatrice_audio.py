@@ -635,6 +635,7 @@ def load_vst3_model(model_name):
         
     if model_name.startswith("custom:"):
         folder_name = model_name[7:]  # strip 'custom:' prefix
+        model_dir = os.path.join("custom_models", folder_name)
         custom_models_base = os.environ.get("BEATRICE_CUSTOM_MODELS_DIR")
         if custom_models_base:
             paraphernalia_dir = os.path.join(custom_models_base, folder_name)
