@@ -100,13 +100,23 @@
 ## 📸 Screenshots
 
 <p align="center">
-<img alt="App Screenshot 1" src="https://github.com/user-attachments/assets/8fc3caac-482e-4c11-a63e-331135fe58c0" width="100%"/>
+  <img alt="Voice Models — JVS Corpus (100 voices) with category filters" src="assets/screenshot_voice_models.png" width="100%"/>
+  <br/><sub>🎤 <b>Voice Models</b> — Browse 100+ JVS voices with animated avatars and category filters</sub>
 </p>
+
 <p align="center">
-<img alt="App Screenshot 2" src="https://github.com/user-attachments/assets/78250418-db4b-47b8-93c1-3711f8faf211" width="100%"/>
+  <img alt="Soundboard — Upload and trigger audio clips" src="assets/screenshot_soundboard.png" width="100%"/>
+  <br/><sub>🔊 <b>Soundboard</b> — Upload audio clips and trigger them with a single click</sub>
 </p>
+
 <p align="center">
-<img alt="App Screenshot 3" src="https://github.com/user-attachments/assets/f5b03f93-618a-4ba8-b723-e241bf6b0d35" width="100%"/>
+  <img alt="Library — Featured presets and Wikimedia sound effects (Japanese UI)" src="assets/screenshot_library.png" width="100%"/>
+  <br/><sub>📚 <b>Library</b> — 100+ curated sound presets with multilingual UI support (Japanese shown)</sub>
+</p>
+
+<p align="center">
+  <img alt="Settings — Themes, light/dark mode and language selector (Chinese UI)" src="assets/screenshot_settings.png" width="100%"/>
+  <br/><sub>⚙️ <b>Settings</b> — 6 handcrafted themes, light/dark mode, and 3 languages (Chinese shown)</sub>
 </p>
 
 ---
