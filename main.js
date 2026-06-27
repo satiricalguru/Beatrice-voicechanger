@@ -65,6 +65,26 @@ function startBackend() {
     }
   }
 
+  // Migrate legacy custom models from project root to userData during development/startup
+  const legacyCustomModelsPath = path.join(__dirname, 'custom_models');
+  if (fs.existsSync(legacyCustomModelsPath) && legacyCustomModelsPath !== customModelsPath) {
+    try {
+      const folders = fs.readdirSync(legacyCustomModelsPath);
+      for (const folder of folders) {
+        const srcFolder = path.join(legacyCustomModelsPath, folder);
+        const destFolder = path.join(customModelsPath, folder);
+        if (fs.statSync(srcFolder).isDirectory()) {
+          if (!fs.existsSync(destFolder)) {
+            console.log(`[Beatrice] Migrating custom model: ${folder}`);
+            fs.cpSync(srcFolder, destFolder, { recursive: true });
+          }
+        }
+      }
+    } catch (err) {
+      console.error('[Beatrice] Migration of legacy custom models failed:', err);
+    }
+  }
+
   // Pass writable custom models base path to Python backend
   const env = Object.assign({}, process.env, {
     BEATRICE_CUSTOM_MODELS_DIR: customModelsPath
