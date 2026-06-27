@@ -2488,11 +2488,11 @@ html[data-color-mode="light"] .theme-card[data-theme="cyberpunk"] .tp-accent { b
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-/* Button styles */
+/* Button styles — always light-colored because the bar always has a dark background */
 .fc-btn {
   background: transparent;
   border: none;
-  color: var(--text-mid);
+  color: rgba(255, 255, 255, 0.70);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -2502,7 +2502,7 @@ html[data-color-mode="light"] .theme-card[data-theme="cyberpunk"] .tp-accent { b
 }
 
 .fc-btn:hover {
-  color: var(--text-hi);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 /* Power Button */
@@ -2543,8 +2543,8 @@ html[data-color-mode="light"] .theme-card[data-theme="cyberpunk"] .tp-accent { b
 .fc-mid-group {
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   padding: 4px 10px;
   gap: 12px;
@@ -2555,6 +2555,12 @@ html[data-color-mode="light"] .theme-card[data-theme="cyberpunk"] .tp-accent { b
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  /* always light on the dark bar */
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.fc-mic-btn:hover {
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .fc-mic-btn.muted {
@@ -2566,13 +2572,19 @@ html[data-color-mode="light"] .theme-card[data-theme="cyberpunk"] .tp-accent { b
 .fc-divider {
   width: 1px;
   height: 18px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.20);
 }
 
 .fc-hear-btn {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  /* always light on the dark bar */
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.fc-hear-btn:hover {
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .fc-hear-btn.active {
@@ -2585,11 +2597,12 @@ html[data-color-mode="light"] .theme-card[data-theme="cyberpunk"] .tp-accent { b
   width: 20px;
   height: 36px;
   border-radius: 4px;
-  color: var(--text-lo);
+  /* always light on the dark bar */
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .fc-settings-trigger:hover {
-  color: var(--text-mid);
+  color: rgba(255, 255, 255, 0.80);
 }
 
 /* Dropdown menu */
