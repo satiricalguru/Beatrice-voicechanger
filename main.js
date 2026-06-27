@@ -1,6 +1,6 @@
 'use strict';
 
-const { app, BrowserWindow, nativeImage } = require('electron');
+const { app, BrowserWindow, nativeImage, ipcMain, globalShortcut, session } = require('electron');
 const { spawn }              = require('child_process');
 const path                   = require('path');
 
@@ -53,6 +53,23 @@ function startBackend() {
   const scriptPath = path.join(appDir, 'beatrice_audio.py');
   console.log('[Beatrice] Spawning Python audio backend:', scriptPath);
 
+  // Writable user data folder setup
+  const userDataPath = app.getPath('userData');
+  const customModelsPath = path.join(userDataPath, 'custom_models');
+  const fs = require('fs');
+  if (!fs.existsSync(customModelsPath)) {
+    try {
+      fs.mkdirSync(customModelsPath, { recursive: true });
+    } catch (e) {
+      console.error('[Beatrice] Failed to create custom_models directory:', e);
+    }
+  }
+
+  // Pass writable custom models base path to Python backend
+  const env = Object.assign({}, process.env, {
+    BEATRICE_CUSTOM_MODELS_DIR: customModelsPath
+  });
+
   let spawnCmd = 'python3';
   let spawnArgs = ['-u', scriptPath];
 
@@ -71,6 +88,7 @@ function startBackend() {
 
   pythonProcess = spawn(spawnCmd, spawnArgs, {
     cwd: appDir,
+    env: env
   });
 
   pythonProcess.stdout.on('data', data =>
@@ -93,6 +111,18 @@ app.whenReady().then(() => {
     const icon = nativeImage.createFromPath(ICON_PATH);
     app.dock.setIcon(icon);
   }
+  
+  // Strip Referer and Origin headers for MyInstants requests to bypass CORS/access restrictions
+  session.defaultSession.webRequest.onBeforeSendHeaders(
+    { urls: ['https://*.myinstants.com/*'] },
+    (details, callback) => {
+      delete details.requestHeaders['Referer'];
+      delete details.requestHeaders['Origin'];
+      details.requestHeaders['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+      callback({ requestHeaders: details.requestHeaders });
+    }
+  );
+
   startBackend();
   createWindow();
 
@@ -108,9 +138,36 @@ app.on('window-all-closed', () => {
 });
 
 app.on('will-quit', () => {
+  globalShortcut.unregisterAll();
   if (pythonProcess) {
     console.log('[Beatrice] Terminating Python backend…');
     pythonProcess.kill('SIGTERM');
     pythonProcess = null;
   }
 });
+
+// IPC Handler for soundboard global keybinds
+ipcMain.on('register-sound-shortcuts', (event, shortcuts) => {
+  globalShortcut.unregisterAll();
+
+  shortcuts.forEach(s => {
+    try {
+      const ok = globalShortcut.register(s.keybind, () => {
+        if (mainWindow && !mainWindow.isDestroyed()) {
+          mainWindow.webContents.send('play-sound-slot', s.index);
+        }
+      });
+      if (!ok) {
+        console.warn(`[Keybind] Failed to register global shortcut: ${s.keybind}`);
+      }
+    } catch (err) {
+      console.error(`[Keybind] Error registering shortcut ${s.keybind}:`, err);
+    }
+  });
+});
+
+// IPC Handler to get the app userData path synchronously
+ipcMain.on('get-user-data-path', (event) => {
+  event.returnValue = app.getPath('userData');
+});
+

@@ -37,3 +37,6 @@ venv/
 
 # Soundboard uploaded audio
 soundboard_audio/
+
+# Custom models uploaded by user
+custom_models/

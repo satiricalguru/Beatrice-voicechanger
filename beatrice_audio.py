@@ -30,9 +30,10 @@ class Config:
     pitch_shift = 0.0  # Semitones shift
     formant_shift = 0.0  # Formant shift value
     volume = 1.0
-    gate_threshold = 0.01  # Noise gate threshold
+    gate_threshold = 0.0  # Noise gate threshold
     input_meter = 0.0
     output_meter = 0.0
+    muted = False
     
     # Advanced routing
     input_device_id = None
@@ -50,6 +51,10 @@ class Config:
     # DSP ready flag — set to True after models are loaded and speaker 0 is initialised
     dsp_ready = False
     current_model = "jvs"
+
+class GateState:
+    envelope = 0.0
+    hold_counter = 0
 
 # Non-blocking audio queue for local monitoring
 monitor_queue = queue.Queue(maxsize=50)
@@ -277,12 +282,18 @@ def restart_audio_streams():
         except Exception as e:
             print("[-] PortAudio stream configuration error:", e)
 
+_sb_playing = False
+_sb_stop_event = threading.Event()
+
 def play_soundboard_audio(file_path, hear_yourself=False):
     """Play an audio file through the selected output device.
     If hear_yourself is True, also plays through the monitor device."""
-    global _sb_stop_event
+    global _sb_stop_event, _sb_playing
+    _sb_playing = True
     _sb_stop_event.clear()
+    print(f"[Soundboard Debug] play_soundboard_audio: file_path={file_path}, hear_yourself={hear_yourself}, Config.output_device_id={Config.output_device_id}, Config.monitor_device_id={Config.monitor_device_id}", flush=True)
     if not HAS_SF:
+        _sb_playing = False
         return
     try:
         data, samplerate = sf.read(file_path, dtype='float32')
@@ -315,6 +326,20 @@ def play_soundboard_audio(file_path, hear_yourself=False):
             except Exception:
                 pass
 
+        # Check if output and monitor devices are the same
+        is_same_device = False
+        if out_dev == mon_dev:
+            is_same_device = True
+        elif out_dev is None or mon_dev is None:
+            try:
+                default_out = sd.default.device[1]
+                o = default_out if out_dev is None else out_dev
+                m = default_out if mon_dev is None else mon_dev
+                if o == m:
+                    is_same_device = True
+            except Exception:
+                pass
+
         if hear_yourself:
             try:
                 mon_info = sd.query_devices(mon_dev, 'output') if mon_dev else sd.query_devices(kind='output')
@@ -330,22 +355,30 @@ def play_soundboard_audio(file_path, hear_yourself=False):
                 ).astype(np.float32)
             else:
                 mon_data = data
-            t_out = threading.Thread(target=_play_stream, args=(out_dev, target_sr, data), daemon=True)
-            t_mon = threading.Thread(target=_play_stream, args=(mon_dev, mon_sr, mon_data), daemon=True)
-            t_out.start()
-            t_mon.start()
-            t_out.join()
-            t_mon.join()
+            
+            if is_same_device:
+                t_out = threading.Thread(target=_play_stream, args=(out_dev, target_sr, data), daemon=True)
+                t_out.start()
+                t_out.join()
+            else:
+                t_out = threading.Thread(target=_play_stream, args=(out_dev, target_sr, data), daemon=True)
+                t_mon = threading.Thread(target=_play_stream, args=(mon_dev, mon_sr, mon_data), daemon=True)
+                t_out.start()
+                t_mon.start()
+                t_out.join()
+                t_mon.join()
         else:
-            # Wrap in a thread so the function returns immediately
-            # and the HTTP handler is never stalled during playback.
-            t_out = threading.Thread(target=_play_stream, args=(out_dev, target_sr, data), daemon=True)
-            t_out.start()
+            if is_same_device:
+                print("[Soundboard] Muted playback because hear_yourself is False and output device matches monitor device.")
+            else:
+                t_out = threading.Thread(target=_play_stream, args=(out_dev, target_sr, data), daemon=True)
+                t_out.start()
+                t_out.join()
     except Exception as e:
         print(f"[-] Soundboard playback error: {e}")
         traceback.print_exc()
-
-_sb_stop_event = threading.Event()
+    finally:
+        _sb_playing = False
 
 def stop_soundboard_audio():
     _sb_stop_event.set()
@@ -386,7 +419,9 @@ class ControlHandler(BaseHTTPRequestHandler):
                 "input_device_id": Config.input_device_id,
                 "output_device_id": Config.output_device_id,
                 "monitor_device_id": Config.monitor_device_id,
-                "hear_yourself": Config.hear_yourself
+                "hear_yourself": Config.hear_yourself,
+                "muted": Config.muted,
+                "sb_playing": _sb_playing
             }
             self.wfile.write(json.dumps(status).encode())
             
@@ -421,6 +456,8 @@ class ControlHandler(BaseHTTPRequestHandler):
                 Config.volume = float(query['volume'][0])
             if 'gate_threshold' in query:
                 Config.gate_threshold = float(query['gate_threshold'][0])
+            if 'muted' in query:
+                Config.muted = query['muted'][0].lower() == 'true'
                 
             # Device Routing updates
             if 'input_device_id' in query:
@@ -487,8 +524,6 @@ def run_http_server():
 # Resolve all paths relative to this script's directory so the project
 # works on any machine regardless of where it is cloned or extracted.
 _BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-if os.path.basename(_BASE_DIR) == "app.asar.unpacked":
-    _BASE_DIR = os.path.dirname(_BASE_DIR)
 lib_path = os.path.join(
     _BASE_DIR,
     "beatrice_2.0.0-rc.2.vst3", "Contents", "MacOS", "beatrice_2.0.0-rc.2.signed"
@@ -594,21 +629,37 @@ def load_vst3_model(model_name):
     global embedding_setter, embedding_context
     global codebooks, additive_embeddings, formant_shift_embeddings, kv_embeddings, n_speakers
     
-    if model_name not in ["jvs", "official_1", "old_tts"]:
+    if model_name not in ["jvs", "official_1", "old_tts", "trump"] and not model_name.startswith("custom:"):
         print(f"[-] Invalid model name requested: {model_name}")
         return
         
-    if model_name == "official_1":
-        model_dir = "beatrice_paraphernalia_official_1"
-    elif model_name == "old_tts":
-        model_dir = "beatrice_paraphernalia_old_tts"
+    if model_name.startswith("custom:"):
+        folder_name = model_name[7:]  # strip 'custom:' prefix
+        custom_models_base = os.environ.get("BEATRICE_CUSTOM_MODELS_DIR")
+        if custom_models_base:
+            paraphernalia_dir = os.path.join(custom_models_base, folder_name)
+        else:
+            paraphernalia_dir = os.path.join(_BASE_DIR, "custom_models", folder_name)
+        if not os.path.isdir(paraphernalia_dir):
+            print(f"[-] Custom model folder not found: {paraphernalia_dir}")
+            return
     else:
-        model_dir = "beatrice_paraphernalia_jvs"
-    paraphernalia_dir = os.path.join(_BASE_DIR, model_dir)
+        if model_name == "official_1":
+            model_dir = "beatrice_paraphernalia_official_1"
+        elif model_name == "old_tts":
+            model_dir = "beatrice_paraphernalia_old_tts"
+        elif model_name == "trump":
+            model_dir = "beatrice_paraphernalia_trump_00001200"
+        else:
+            model_dir = "beatrice_paraphernalia_jvs"
+        paraphernalia_dir = os.path.join(_BASE_DIR, model_dir)
     phone_bin = f"{paraphernalia_dir}/phone_extractor.bin".encode()
     pitch_bin = f"{paraphernalia_dir}/pitch_estimator.bin".encode()
     waveform_bin = f"{paraphernalia_dir}/waveform_generator.bin".encode()
-    embedding_bin = f"{paraphernalia_dir}/embedding_setter.bin".encode()
+    embedding_bin_path = f"{paraphernalia_dir}/embedding_setter.bin"
+    if not os.path.exists(embedding_bin_path):
+        embedding_bin_path = os.path.join(_BASE_DIR, "beatrice_paraphernalia_jvs/embedding_setter.bin")
+    embedding_bin = embedding_bin_path.encode()
     speaker_bin = f"{paraphernalia_dir}/speaker_embeddings.bin".encode()
     
     # 1. Clear dsp_ready to fallback to bypass mode safely during load
@@ -774,7 +825,30 @@ _speaker_update_thread.start()
 def audio_callback(indata, outdata, frames, time_info, status):
     # Input volume meter
     in_samples = indata[:, 0]
+    if Config.muted:
+        in_samples = np.zeros_like(in_samples)
     Config.input_meter = float(np.max(np.abs(in_samples)))
+
+    # --- Noise gate envelope follower ---
+    is_above = Config.input_meter >= Config.gate_threshold
+    if is_above:
+        GateState.envelope = 1.0
+        GateState.hold_counter = 20  # 200ms hold (20 blocks * 10ms)
+    else:
+        if GateState.hold_counter > 0:
+            GateState.hold_counter -= 1
+            GateState.envelope = 1.0
+        else:
+            # Release time ~150ms: 15 blocks (decay rate per 10ms block: 1/15 = 0.067)
+            GateState.envelope = max(0.0, GateState.envelope - 0.067)
+
+    # Smoothly gate the input signal
+    in_samples = in_samples * GateState.envelope
+
+    if GateState.envelope <= 0.0:
+        outdata[:, 0] = 0.0
+        Config.output_meter = 0.0
+        return
 
     # --- Dispatch pending speaker index to the background worker ---
     # We do NOT call update_target_speaker() directly here; that involves
@@ -808,12 +882,6 @@ def audio_callback(indata, outdata, frames, time_info, status):
                 pass
         else:
             outdata[:, 0] = 0.0
-        return
-
-    # --- Noise gate ---
-    if Config.input_meter < Config.gate_threshold:
-        outdata[:, 0] = 0.0
-        Config.output_meter = 0.0
         return
 
     # --- DSP pipeline ---

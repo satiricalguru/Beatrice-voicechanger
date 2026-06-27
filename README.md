@@ -9,12 +9,9 @@
 ![Python](https://img.shields.io/badge/-Python%203.9%2B-3776AB?style=flat-square&logo=python)
 ![License](https://img.shields.io/badge/-MIT-green?style=flat-square)
 
-<img src="beatrice_paraphernalia_jvs/noimage.png" width="140" alt="Beatrice Logo" />
-
-**Morph your voice in real-time** using multiple voice models (JVS Corpus, Official Model 1, and Classic Old TTS) — powered by the Beatrice 2.0.0-rc.2 DSP engine with sub-10ms latency.
+**Morph your voice in real-time** using multiple voice models (JVS Corpus, Official Model 1, and Classic Old TTS) — powered by the Beatrice 2.0.0 DSP engine with sub-10ms latency.
 
 > **🖥️ Windows Version:** If you want to download or build the Windows version, check out the [Beatrice Windows Repository](https://github.com/satiricalguru/BeatriceVST-voicechanger.git).
-> 
 </div>
 
 ---
