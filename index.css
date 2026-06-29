@@ -2284,6 +2284,7 @@ html[data-color-mode="light"] .theme-card[data-theme="cyberpunk"] .tp-accent { b
   justify-content: center;
   overflow: hidden;
   border-radius: 0;
+  background: #0b0b14;
 }
 .lib-card-img {
   width: 100%;
@@ -2747,3 +2748,9 @@ html[data-color-mode="light"] .theme-card[data-theme="cyberpunk"] .tp-accent { b
 .fc-sb-btn:hover .fc-sb-stop-icon {
   transform: scale(1.1);
 }
+
+/* Invert black silhouette icons on dark backgrounds */
+.invert-img {
+  filter: invert(1) brightness(1.8) contrast(1.2);
+}
+

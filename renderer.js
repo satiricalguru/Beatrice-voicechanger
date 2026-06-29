@@ -182,6 +182,8 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Facepalm.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/bruh.mp3',
     author: 'Meme Central',
     license: 'CC-BY-SA'
@@ -192,6 +194,8 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Facepalm.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/emotional-damage-meme.mp3',
     author: 'Steven He',
     license: 'CC-BY-SA'
@@ -202,6 +206,7 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Windows_logo_-_2012.svg',
     url: 'https://www.myinstants.com/media/sounds/windows-xp-error.mp3',
     author: 'Microsoft',
     license: 'Copyright Microsoft'
@@ -212,6 +217,7 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Theft_Auto_logo_series.svg',
     url: 'https://www.myinstants.com/media/sounds/gta-v-wasted-death-sound.mp3',
     author: 'Rockstar Games',
     license: 'Copyright Rockstar'
@@ -222,6 +228,8 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Violin.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/sad-violin.mp3',
     author: 'Spongememe',
     license: 'CC-BY-SA'
@@ -232,7 +240,9 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
-    url: 'https://www.myinstants.com/media/sounds/coffin-dance_1.mp3',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Coffin.svg',
+    invertImage: true,
+    url: 'https://www.myinstants.com/media/sounds/coffin-dance.mp3',
     author: 'Vicetone & Tony Igy',
     license: 'CC-BY-SA'
   },
@@ -242,6 +252,8 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Bell-solid.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/taco-bell-bong.mp3',
     author: 'Taco Bell',
     license: 'Copyright Taco Bell'
@@ -252,7 +264,9 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
-    url: 'https://www.myinstants.com/media/sounds/curb-your-enthusiasm-theme_3.mp3',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Facepalm.svg',
+    invertImage: true,
+    url: 'https://www.myinstants.com/media/sounds/directed-by-robert-b-weide-theme-meme.mp3',
     author: 'Luciano Michelini',
     license: 'CC-BY-SA'
   },
@@ -262,6 +276,7 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_Federal_Bureau_of_Investigation.svg',
     url: 'https://www.myinstants.com/media/sounds/fbi-open-up-sfx.mp3',
     author: 'Federal Meme',
     license: 'CC-BY-SA'
@@ -272,6 +287,7 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png',
     url: 'https://www.myinstants.com/media/sounds/discord-call.mp3',
     author: 'Discord',
     license: 'Copyright Discord'
@@ -282,6 +298,7 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png',
     url: 'https://www.myinstants.com/media/sounds/discord-join.mp3',
     author: 'Discord',
     license: 'Copyright Discord'
@@ -292,6 +309,7 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png',
     url: 'https://www.myinstants.com/media/sounds/discord-leave.mp3',
     author: 'Discord',
     license: 'Copyright Discord'
@@ -302,6 +320,7 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png',
     url: 'https://www.myinstants.com/media/sounds/discord-mute.mp3',
     author: 'Discord',
     license: 'Copyright Discord'
@@ -312,6 +331,7 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png',
     url: 'https://www.myinstants.com/media/sounds/discord-unmute.mp3',
     author: 'Discord',
     license: 'Copyright Discord'
@@ -322,6 +342,7 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png',
     url: 'https://www.myinstants.com/media/sounds/discord-disconnect.mp3',
     author: 'Discord',
     license: 'Copyright Discord'
@@ -332,6 +353,7 @@ const FAMOUS_PRESETS = [
     category: 'memes',
     emoji: '😂',
     color: '#ea580c',
+    image: 'https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png',
     url: 'https://www.myinstants.com/media/sounds/discord-notification.mp3',
     author: 'Discord',
     license: 'Copyright Discord'
@@ -344,6 +366,7 @@ const FAMOUS_PRESETS = [
     category: 'anime',
     emoji: '🌸',
     color: '#db2777',
+    malCharName: 'Kenshiro',
     url: 'https://www.myinstants.com/media/sounds/omae-wa-mou-shindeiru.mp3',
     author: 'Fist of the North Star',
     license: 'Copyright Shonen'
@@ -354,6 +377,7 @@ const FAMOUS_PRESETS = [
     category: 'anime',
     emoji: '🌸',
     color: '#db2777',
+    malCharName: 'DIO JoJo',
     url: 'https://www.myinstants.com/media/sounds/hd-stardust-crusaders-za-warudo_1.mp3',
     author: 'Jojo\'s Bizarre Adventure',
     license: 'Copyright David Production'
@@ -364,6 +388,7 @@ const FAMOUS_PRESETS = [
     category: 'anime',
     emoji: '🌸',
     color: '#db2777',
+    malCharName: 'Mayuri Shiina',
     url: 'https://www.myinstants.com/media/sounds/tuturu_1.mp3',
     author: 'Steins;Gate',
     license: 'Copyright White Fox'
@@ -374,6 +399,7 @@ const FAMOUS_PRESETS = [
     category: 'anime',
     emoji: '🌸',
     color: '#db2777',
+    image: 'https://dragonball-api.com/characters/goku_normal.webp',
     url: 'https://www.myinstants.com/media/sounds/dbz-teleport.mp3',
     author: 'Toei Animation',
     license: 'Copyright Toei'
@@ -384,6 +410,7 @@ const FAMOUS_PRESETS = [
     category: 'anime',
     emoji: '🌸',
     color: '#db2777',
+    malCharName: 'Naruto Uzumaki',
     url: 'https://www.myinstants.com/media/sounds/sad-naruto.mp3',
     author: 'Toshio Masuda',
     license: 'Copyright Studio Pierrot'
@@ -405,6 +432,7 @@ const FAMOUS_PRESETS = [
     category: 'anime',
     emoji: '🌸',
     color: '#db2777',
+    malCharName: 'Nico Yazawa',
     url: 'https://www.myinstants.com/media/sounds/nico-nico-nii.mp3',
     author: 'Love Live!',
     license: 'Copyright Sunrise'
@@ -415,6 +443,7 @@ const FAMOUS_PRESETS = [
     category: 'anime',
     emoji: '🌸',
     color: '#db2777',
+    malCharName: 'DIO JoJo',
     url: 'https://www.myinstants.com/media/sounds/kono-dio-da99.mp3',
     author: 'JoJo\'s Bizarre Adventure',
     license: 'Copyright David Production'
@@ -425,6 +454,7 @@ const FAMOUS_PRESETS = [
     category: 'anime',
     emoji: '🌸',
     color: '#db2777',
+    image: 'https://static.wikia.nocookie.net/onepiece/images/6/6d/Monkey_D._Luffy_Anime_Post_Timeskip_Infobox.png',
     url: 'https://www.myinstants.com/media/sounds/gomu-gomu-no.mp3',
     author: 'One Piece',
     license: 'Copyright Toei Animation'
@@ -446,6 +476,7 @@ const FAMOUS_PRESETS = [
     category: 'anime',
     emoji: '🌸',
     color: '#db2777',
+    malCharName: 'Eren Yeager',
     url: 'https://www.myinstants.com/media/sounds/tatakae-eren.mp3',
     author: 'Attack on Titan',
     license: 'Copyright MAPPA'
@@ -456,6 +487,7 @@ const FAMOUS_PRESETS = [
     category: 'anime',
     emoji: '🌸',
     color: '#db2777',
+    malCharName: 'Saitama',
     url: 'https://www.myinstants.com/media/sounds/one-punch-man_1.mp3',
     author: 'One Punch Man',
     license: 'Copyright Madhouse'
@@ -466,6 +498,7 @@ const FAMOUS_PRESETS = [
     category: 'anime',
     emoji: '🌸',
     color: '#db2777',
+    malCharName: 'Erwin Smith',
     url: 'https://www.myinstants.com/media/sounds/erwin-smith-shinzou-wo-sasageyo_trim.mp3',
     author: 'Attack on Titan',
     license: 'Copyright Wit Studio'
@@ -476,6 +509,7 @@ const FAMOUS_PRESETS = [
     category: 'anime',
     emoji: '🌸',
     color: '#db2777',
+    image: 'https://dragonball-api.com/characters/goku_normal.webp',
     url: 'https://www.myinstants.com/media/sounds/saiyan.mp3',
     author: 'Dragon Ball Z',
     license: 'Copyright Toei Animation'
@@ -508,6 +542,7 @@ const FAMOUS_PRESETS = [
     category: 'music',
     emoji: '🎵',
     color: '#7c3aed',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Rick_Astley_Tivoli_Gardens.jpg',
     url: 'https://www.myinstants.com/media/sounds/rick-roll.mp3',
     author: 'Rick Astley',
     license: 'Copyright RCA Records'
@@ -518,6 +553,8 @@ const FAMOUS_PRESETS = [
     category: 'music',
     emoji: '🎵',
     color: '#7c3aed',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Font_Awesome_5_solid_dumbbell.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/gigachad-theme.mp3',
     author: 'SXVXVG',
     license: 'CC-BY-SA'
@@ -528,6 +565,7 @@ const FAMOUS_PRESETS = [
     category: 'music',
     emoji: '🎵',
     color: '#7c3aed',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Mario_Bros._logo.svg',
     url: 'https://www.myinstants.com/media/sounds/super-mario-bros-theme.mp3',
     author: 'Koji Kondo',
     license: 'Copyright Nintendo'
@@ -538,6 +576,7 @@ const FAMOUS_PRESETS = [
     category: 'music',
     emoji: '🎵',
     color: '#7c3aed',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Undertale_logo.png',
     url: 'https://www.myinstants.com/media/sounds/megalovania.mp3',
     author: 'Toby Fox',
     license: 'Copyright Toby Fox'
@@ -548,6 +587,7 @@ const FAMOUS_PRESETS = [
     category: 'music',
     emoji: '🎵',
     color: '#7c3aed',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tetris_logo_English.svg',
     url: 'https://www.myinstants.com/media/sounds/tetris-theme.mp3',
     author: 'Traditional',
     license: 'Public Domain'
@@ -576,7 +616,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-aayein',
     name: 'Aayein Meme (Aayein?)',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/aayein-meme.mp3',
     author: 'Indian Meme',
@@ -586,7 +626,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-paisa',
     name: 'Paisa Hi Paisa Hoga',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/tmp5f9yp0pe.mp3',
     author: 'Phir Hera Pheri',
@@ -596,7 +636,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-gunda',
     name: 'Kya Gunda Banega Re Tu',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/kya-gunda-banega-re-tu.mp3',
     author: 'Phir Hera Pheri',
@@ -606,7 +646,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-maro-mujhe',
     name: 'Oh Bhai Maro Mujhe Maro',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/o-bhai-maro-mujhe-maro.mp3',
     author: 'Momin Saqib',
@@ -616,7 +656,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-modi-wah',
     name: 'Wah Modi Ji Wah',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/modi-ji-wah.mp3',
     author: 'Narendra Modi',
@@ -626,7 +666,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-baap-re',
     name: 'Are Baap Re Yaad Aya',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/are-baap-re-yaad-aya.mp3',
     author: 'Hera Pheri',
@@ -636,7 +676,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-baburao',
     name: 'Baburao Phir Hera Pheri',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/phirherapheri.mp3',
     author: 'Hera Pheri',
@@ -646,7 +686,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-gian-aap',
     name: 'Gian Hain Aap',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/gian-hain-aap.mp3',
     author: 'Doraemon',
@@ -656,7 +696,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-shakal-gian',
     name: 'Shakal Dekhi Hai? (Gian)',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/shakal-dekhi-hai-gian.mp3',
     author: 'Doraemon',
@@ -666,7 +706,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-kbc-suspense',
     name: 'KBC Question Suspense',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/kbc-question.mp3',
     author: 'KBC',
@@ -676,7 +716,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-sochna-bhau',
     name: 'Sochna Padta Hai Re',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/sochna-pdta-hai-re-hindustani-bhau.mp3',
     author: 'Hindustani Bhau',
@@ -686,7 +726,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-computer-virus',
     name: 'Your Computer Has Virus',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/hello-your-computer-has-virus-sound-effect.mp3',
     author: 'Tech Support Scammer',
@@ -696,7 +736,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-angry-scammer',
     name: 'Angry Indian Scammer',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/getfromytcom-the-angriest-scamme-1.mp3',
     author: 'Tech Support Scammer',
@@ -706,7 +746,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-proud-army',
     name: 'Feeling Proud Indian Army',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/feeling-proud-indian-army.mp3',
     author: 'Indian Army Phonk',
@@ -716,7 +756,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-chalti-cocaine',
     name: 'Chalti Firti Cocaine',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/chalti-firti-cocaine.mp3',
     author: 'CarryMinati',
@@ -726,7 +766,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-alakh-motivation',
     name: 'Alakh Sir Hello Bacho',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/alakh-sir-motivation.mp3',
     author: 'Physics Wallah',
@@ -736,7 +776,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-guy-laugh',
     name: 'Indian Guy Meme Laugh',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/indian-guy-meme-laugh.mp3',
     author: 'Indian Guy',
@@ -746,7 +786,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-indian-sorry',
     name: 'Indian Sorry Sorry',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/indian-sorry.mp3',
     author: 'Indian Meme',
@@ -756,7 +796,7 @@ const FAMOUS_PRESETS = [
     id: 'preset-out-of-reach',
     name: '[Hindi] Phone Out of Reach',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
     url: 'https://www.myinstants.com/media/sounds/hindi-phone-cannot-be-reached.mp3',
     author: 'Telecom Provider',
@@ -766,8 +806,10 @@ const FAMOUS_PRESETS = [
     id: 'preset-sad-flute',
     name: 'Indian Sad Flute Music',
     category: 'indian',
-    emoji: '🇮🇳',
+    emoji: '🪘',
     color: '#047857',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Bansuri_ancient_bamboo_flute_sanskrit_swara.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/tmpauxfo4ff.mp3',
     author: 'Indian Flute',
     license: 'CC-BY-SA'
@@ -778,6 +820,7 @@ const FAMOUS_PRESETS = [
     category: 'nature',
     emoji: '🌿',
     color: '#16a34a',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Acheta_domesticus_(common_house_cricket).jpg',
     url: 'https://www.myinstants.com/media/sounds/crickets.mp3',
     author: 'Nature Sound',
     license: 'CC-BY-SA'
@@ -788,6 +831,7 @@ const FAMOUS_PRESETS = [
     category: 'nature',
     emoji: '🌿',
     color: '#16a34a',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Wolf_howling_on_glacial_erratic2.jpg',
     url: 'https://www.myinstants.com/media/sounds/wolf-howl.mp3',
     author: 'Nature Sound',
     license: 'CC-BY-SA'
@@ -798,6 +842,8 @@ const FAMOUS_PRESETS = [
     category: 'nature',
     emoji: '🌿',
     color: '#16a34a',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Heavy_rain.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/rain.mp3',
     author: 'Nature Sound',
     license: 'CC-BY-SA'
@@ -808,6 +854,8 @@ const FAMOUS_PRESETS = [
     category: 'nature',
     emoji: '🌿',
     color: '#16a34a',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Font_Awesome_5_solid_wind.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/wind-howling.mp3',
     author: 'Nature Sound',
     license: 'CC-BY-SA'
@@ -818,6 +866,8 @@ const FAMOUS_PRESETS = [
     category: 'nature',
     emoji: '🌿',
     color: '#16a34a',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Rooster.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/rooster.mp3',
     author: 'Nature Sound',
     license: 'CC-BY-SA'
@@ -828,6 +878,8 @@ const FAMOUS_PRESETS = [
     category: 'comedy',
     emoji: '🎭',
     color: '#d97706',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Trombone.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/sad-trombone.mp3',
     author: 'Comedy Sound',
     license: 'CC-BY-SA'
@@ -848,6 +900,8 @@ const FAMOUS_PRESETS = [
     category: 'comedy',
     emoji: '🎭',
     color: '#d97706',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Unicode_1F622.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/boowomp.mp3',
     author: 'Comedy Sound',
     license: 'CC-BY-SA'
@@ -878,6 +932,7 @@ const FAMOUS_PRESETS = [
     category: 'games',
     emoji: '🎮',
     color: '#0891b2',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Mario_Bros._logo.svg',
     url: 'https://www.myinstants.com/media/sounds/mario-jump.mp3',
     author: 'Nintendo',
     license: 'Copyright Nintendo'
@@ -888,6 +943,8 @@ const FAMOUS_PRESETS = [
     category: 'games',
     emoji: '🎮',
     color: '#0891b2',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Minecraft-creeper-face.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/classic_hurt.mp3',
     author: 'Mojang',
     license: 'Copyright Mojang'
@@ -898,6 +955,7 @@ const FAMOUS_PRESETS = [
     category: 'games',
     emoji: '🎮',
     color: '#0891b2',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Warning.svg',
     url: 'https://www.myinstants.com/media/sounds/metal-gear-solid-alert.mp3',
     author: 'Konami',
     license: 'Copyright Konami'
@@ -908,6 +966,7 @@ const FAMOUS_PRESETS = [
     category: 'games',
     emoji: '🎮',
     color: '#0891b2',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Theft_Auto_logo_series.svg',
     url: 'https://www.myinstants.com/media/sounds/gta-san-andreas-ah-shit-here-we-go-again.mp3',
     author: 'Rockstar Games',
     license: 'Copyright Rockstar'
@@ -918,6 +977,7 @@ const FAMOUS_PRESETS = [
     category: 'games',
     emoji: '🎮',
     color: '#0891b2',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Pac-Man.svg',
     url: 'https://www.myinstants.com/media/sounds/pacman.mp3',
     author: 'Bandai Namco',
     license: 'Copyright Bandai Namco'
@@ -958,6 +1018,8 @@ const FAMOUS_PRESETS = [
     category: 'horror',
     emoji: '👻',
     color: '#7f1d1d',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Skull-Icon.svg',
+    invertImage: true,
     url: 'https://www.myinstants.com/media/sounds/screamer.mp3',
     author: 'Horror Sound',
     license: 'CC-BY-SA'
@@ -999,7 +1061,7 @@ const LIB_CATEGORIES = [
     wmQuery: 'sound effect audio',     fsQuery: 'sound effect', fsFilter: '' },
   { id: 'memes',  label: 'Memes',  emoji: '😂', color: '#ea580c',
     wmQuery: 'meme funny viral sound', fsQuery: 'meme funny',  fsFilter: '' },
-  { id: 'indian', label: 'Indian', emoji: '🇮🇳', color: '#047857',
+  { id: 'indian', label: 'Indian', emoji: '🪘', color: '#047857',
     wmQuery: 'indian hindi',           fsQuery: 'indian hindi',  fsFilter: '' },
   { id: 'sfx',    label: 'SFX',    emoji: '💥', color: '#dc2626',
     wmQuery: 'sound effect explosion', fsQuery: 'sound effect', fsFilter: 'type:wav' },
@@ -1372,6 +1434,33 @@ function saveSoundboard() {
   updateRegisteredKeybinds();
 }
 
+// ── Jikan API: anime character images with localStorage cache ────────────
+const _jikanImgCache = {};
+async function fetchJikanCharImage(charName) {
+  if (Object.prototype.hasOwnProperty.call(_jikanImgCache, charName)) return _jikanImgCache[charName];
+  const lsKey = 'beatrice_jikan_' + charName.replace(/\W+/g, '_');
+  const stored = localStorage.getItem(lsKey);
+  if (stored !== null) { _jikanImgCache[charName] = stored || null; return _jikanImgCache[charName]; }
+  await new Promise(r => setTimeout(r, Math.random() * 600 + 100)); // stagger to avoid rate-limit
+  try {
+    const resp = await fetch(`https://api.jikan.moe/v4/characters?q=${encodeURIComponent(charName)}&limit=1&order_by=favorites&sort=desc`);
+    if (!resp.ok) { _jikanImgCache[charName] = null; localStorage.setItem(lsKey, ''); return null; }
+    const data = await resp.json();
+    const url  = data?.data?.[0]?.images?.jpg?.image_url || null;
+    _jikanImgCache[charName] = url;
+    localStorage.setItem(lsKey, url || '');
+    return url;
+  } catch { _jikanImgCache[charName] = null; return null; }
+}
+
+function lightenHex(hex, amount = 55) {
+  const n = parseInt(hex.replace('#', ''), 16);
+  const r = Math.min(255, (n >> 16) + amount);
+  const g = Math.min(255, ((n >> 8) & 0xff) + amount);
+  const b = Math.min(255, (n & 0xff) + amount);
+  return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+}
+
 function getImageUrlForSound(sound) {
   if (sound.imagePath) {
     try {
@@ -1382,8 +1471,33 @@ function getImageUrlForSound(sound) {
   }
   if (sound.image) return sound.image;
 
-  const seed = encodeURIComponent(sound.id || sound.name);
-  return `https://picsum.photos/150/150?random=${seed}`;
+  // Professional gradient card — each sound gets a unique background color based on name/ID
+  const emoji = sound.emoji || '🔊';
+  const str = sound.name || sound.id || '';
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const hue = Math.abs(hash % 360);
+  const sat = 70; // Vibrant saturation
+  const base = `hsl(${hue}, ${sat}%, 25%)`;
+  const lite = `hsl(${hue}, ${sat}%, 55%)`;
+
+  const svgStr = [
+    `<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150">`,
+    `<defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">`,
+    `<stop offset="0%" stop-color="${lite}"/>`,
+    `<stop offset="100%" stop-color="${base}"/>`,
+    `</linearGradient></defs>`,
+    `<rect width="150" height="150" fill="url(#g)"/>`,
+    `<circle cx="130" cy="20"  r="60" fill="rgba(255,255,255,0.08)"/>`,
+    `<circle cx="15"  cy="138" r="48" fill="rgba(0,0,0,0.12)"/>`,
+    `<text x="75" y="78" font-size="58" text-anchor="middle" dominant-baseline="middle" `,
+    `font-family="system-ui,Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">`,
+    emoji, `</text></svg>`
+  ].join('');
+  try { return 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgStr))); }
+  catch (e) { return 'data:image/svg+xml;base64,' + btoa(svgStr); }
 }
 
 function renderSoundboardMain() {
@@ -1391,15 +1505,25 @@ function renderSoundboardMain() {
   if (!container) return;
   container.innerHTML = '';
 
+  // Sort soundboard sounds: first show image with sound, then emoji with sound
+  soundboardSounds.sort((a, b) => {
+    const hasA = !!(a.image || a.imagePath || a.malCharName);
+    const hasB = !!(b.image || b.imagePath || b.malCharName);
+    if (hasA && !hasB) return -1;
+    if (!hasA && hasB) return 1;
+    return 0;
+  });
+
   soundboardSounds.forEach((sound, i) => {
     const el = document.createElement('div');
     el.className = 'sb-main-slot';
     el.dataset.index = i;
 
     const imageUrl = getImageUrlForSound(sound);
-    const isCustomImage = !!(sound.image || sound.imagePath || sound.id === 'preset-kamehameha' || sound.id === 'preset-goku-ui');
-    const imageStyle = isCustomImage ? 'style="object-fit: contain; background: #0b0b14;"' : '';
-    const imageHtml = `<img src="${imageUrl}" alt="" ${imageStyle} onerror="this.src='icon.png';">`;
+    const isCustomImage = !!(sound.image || sound.imagePath);
+    const imageStyle = isCustomImage ? 'style="object-fit: contain;"' : '';
+    const imgClass = sound.invertImage ? ' class="invert-img"' : '';
+    const imageHtml = `<img src="${imageUrl}" alt=""${imgClass} ${imageStyle} data-emoji="${sound.emoji || '🔊'}" data-color="${sound.color || '#1a1a2e'}" onerror="this.onerror=null;this.src=getImageUrlForSound({emoji:this.dataset.emoji,color:this.dataset.color});this.style.objectFit='cover';this.style.background='transparent';">`;
 
     const isListening = isRecordingKeybindForSlot === i;
     const keybindText = isListening ? 'Press keys...' : (sound.keybind || 'Add keybind');
@@ -3061,6 +3185,15 @@ function renderLibGrid(sounds) {
   const addedIds = new Set(soundboardSounds.filter(s => s.libId).map(s => s.libId));
   const availableSounds = sounds.filter(sound => !addedIds.has(sound.id));
 
+  // Sort available sounds: first show image with sound, then emoji with sound
+  availableSounds.sort((a, b) => {
+    const hasA = !!(a.image || a.imagePath || a.malCharName);
+    const hasB = !!(b.image || b.imagePath || b.malCharName);
+    if (hasA && !hasB) return -1;
+    if (!hasA && hasB) return 1;
+    return 0;
+  });
+
   if (!availableSounds.length) {
     grid.innerHTML = '<div class="lib-empty">No sounds found. Try a different category or search term.</div>';
     return;
@@ -3083,9 +3216,10 @@ function makeLibCard(sound, isAdded) {
   const addIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>`;
 
   const imageUrl = getImageUrlForSound(sound);
-  const isCustomImage = !!(sound.image || sound.imagePath || sound.id === 'preset-kamehameha' || sound.id === 'preset-goku-ui');
-  const imageStyle = isCustomImage ? 'style="object-fit: contain; background: #0b0b14;"' : '';
-  const thumbInner = `<img src="${imageUrl}" alt="" class="lib-card-img" ${imageStyle} loading="lazy" onerror="this.src='icon.png';">`;
+  const isCustomImage = !!(sound.image || sound.imagePath);
+  const imageStyle = isCustomImage ? 'style="object-fit: contain;"' : '';
+  const imgClass = 'lib-card-img' + (sound.invertImage ? ' invert-img' : '');
+  const thumbInner = `<img src="${imageUrl}" alt="" class="${imgClass}" ${imageStyle} loading="lazy" data-emoji="${sound.emoji || '🔊'}" data-color="${sound.color || '#1a1a2e'}" onerror="this.onerror=null;this.src=getImageUrlForSound({emoji:this.dataset.emoji,color:this.dataset.color});this.style.objectFit='cover';this.style.background='transparent';">`;
 
   card.innerHTML = `
     <div class="lib-card-thumb">
@@ -3113,6 +3247,20 @@ function makeLibCard(sound, isAdded) {
     if (btn.classList.contains('loading')) return;
     await downloadToSoundboard(sound, btn);
   });
+
+  // Lazy-load anime character image from Jikan API if malCharName is set
+  if (sound.malCharName && !sound.image) {
+    const libImg = card.querySelector('.lib-card-img');
+    if (libImg) {
+      fetchJikanCharImage(sound.malCharName).then(url => {
+        if (url && libImg.isConnected) {
+          libImg.src = url;
+          libImg.style.objectFit = 'contain';
+          libImg.style.background = '#0b0b14';
+        }
+      });
+    }
+  }
 
   return card;
 }
